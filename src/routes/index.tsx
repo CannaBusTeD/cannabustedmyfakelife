@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AlbumPlayer } from "@/components/AlbumPlayer";
+import { Gallery } from "@/components/Gallery";
+import { SocialButtons } from "@/components/SocialButtons";
 import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
@@ -77,10 +79,16 @@ function AlbumSite() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <a
-              href="#tracks"
+              href="#gallery"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-ember transition px-6 py-3 font-mono text-xs uppercase tracking-[0.3em] rounded-sm shadow-lg shadow-primary/30"
             >
-              ▶ Play the album
+              ▶ Watch the videos
+            </a>
+            <a
+              href="#tracks"
+              className="inline-flex items-center gap-2 border border-border/70 hover:border-ember hover:text-ember transition px-6 py-3 font-mono text-xs uppercase tracking-[0.3em] rounded-sm"
+            >
+              Listen to the album
             </a>
             <a
               href="#about"
@@ -89,7 +97,22 @@ function AlbumSite() {
               Read the story
             </a>
           </div>
+          <div className="mt-6 flex justify-center">
+            <SocialButtons />
+          </div>
         </div>
+
+        {/* Gallery */}
+        <section id="gallery" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32">
+          <div className="text-center mb-10">
+            <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
+              Watch The Videos
+            </div>
+            <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">The Gallery</h2>
+            <p className="font-script text-ember text-xl mt-1">every cover is a doorway</p>
+          </div>
+          <Gallery />
+        </section>
       </section>
 
       {/* Album panel */}
