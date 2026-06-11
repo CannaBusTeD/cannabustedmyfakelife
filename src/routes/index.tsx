@@ -41,6 +41,7 @@ function AlbumSite() {
             CannaBus<span className="text-ember">TeD</span>
           </a>
           <nav className="hidden sm:flex gap-7 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+            <a href="#gallery" className="hover:text-ember transition">Gallery</a>
             <a href="#album" className="hover:text-ember transition">Album</a>
             <a href="#tracks" className="hover:text-ember transition">Tracks</a>
             <a href="#about" className="hover:text-ember transition">About</a>
