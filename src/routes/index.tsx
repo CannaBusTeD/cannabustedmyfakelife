@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AlbumPlayer } from "@/components/AlbumPlayer";
+import { Gallery } from "@/components/Gallery";
+import { SocialButtons } from "@/components/SocialButtons";
 import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
@@ -39,6 +41,7 @@ function AlbumSite() {
             CannaBus<span className="text-ember">TeD</span>
           </a>
           <nav className="hidden sm:flex gap-7 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+            <a href="#gallery" className="hover:text-ember transition">Gallery</a>
             <a href="#album" className="hover:text-ember transition">Album</a>
             <a href="#tracks" className="hover:text-ember transition">Tracks</a>
             <a href="#about" className="hover:text-ember transition">About</a>
@@ -77,10 +80,16 @@ function AlbumSite() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3 justify-center">
             <a
-              href="#tracks"
+              href="#gallery"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-ember transition px-6 py-3 font-mono text-xs uppercase tracking-[0.3em] rounded-sm shadow-lg shadow-primary/30"
             >
-              ▶ Play the album
+              ▶ Watch the videos
+            </a>
+            <a
+              href="#tracks"
+              className="inline-flex items-center gap-2 border border-border/70 hover:border-ember hover:text-ember transition px-6 py-3 font-mono text-xs uppercase tracking-[0.3em] rounded-sm"
+            >
+              Listen to the album
             </a>
             <a
               href="#about"
@@ -89,7 +98,22 @@ function AlbumSite() {
               Read the story
             </a>
           </div>
+          <div className="mt-6 flex justify-center">
+            <SocialButtons />
+          </div>
         </div>
+
+        {/* Gallery */}
+        <section id="gallery" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32">
+          <div className="text-center mb-10">
+            <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
+              Watch The Videos
+            </div>
+            <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">The Gallery</h2>
+            <p className="font-script text-ember text-xl mt-1">every cover is a doorway</p>
+          </div>
+          <Gallery />
+        </section>
       </section>
 
       {/* Album panel */}
@@ -219,14 +243,21 @@ function AlbumSite() {
 
       {/* Footer */}
       <footer className="relative z-10 mt-32 border-t border-border/60">
-        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row gap-4 items-center justify-between font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-          <div>© CannaBusTeD · My Fake Life</div>
-          <div className="flex gap-6">
+        <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col gap-6 items-center text-center">
+          <div className="font-display text-2xl text-parchment">
+            CannaBus<span className="text-ember">TeD</span>
+          </div>
+          <div className="font-script text-ember text-xl -mt-2">My Fake Life</div>
+          <SocialButtons />
+          <div className="flex gap-6 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+            <a href="#gallery" className="hover:text-ember">Watch</a>
             <a href="#tracks" className="hover:text-ember">Listen</a>
             <a href="#about" className="hover:text-ember">About</a>
             <a href="#press" className="hover:text-ember">Press</a>
           </div>
-          <div className="opacity-70">Songs · Stories · Signals</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground opacity-70">
+            © CannaBusTeD · Songs · Stories · Signals
+          </div>
         </div>
       </footer>
     </div>
