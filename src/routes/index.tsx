@@ -242,14 +242,21 @@ function AlbumSite() {
 
       {/* Footer */}
       <footer className="relative z-10 mt-32 border-t border-border/60">
-        <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row gap-4 items-center justify-between font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-          <div>© CannaBusTeD · My Fake Life</div>
-          <div className="flex gap-6">
+        <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col gap-6 items-center text-center">
+          <div className="font-display text-2xl text-parchment">
+            CannaBus<span className="text-ember">TeD</span>
+          </div>
+          <div className="font-script text-ember text-xl -mt-2">My Fake Life</div>
+          <SocialButtons />
+          <div className="flex gap-6 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
+            <a href="#gallery" className="hover:text-ember">Watch</a>
             <a href="#tracks" className="hover:text-ember">Listen</a>
             <a href="#about" className="hover:text-ember">About</a>
             <a href="#press" className="hover:text-ember">Press</a>
           </div>
-          <div className="opacity-70">Songs · Stories · Signals</div>
+          <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground opacity-70">
+            © CannaBusTeD · Songs · Stories · Signals
+          </div>
         </div>
       </footer>
     </div>
