@@ -1,7 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { AlbumPlayer } from "@/components/AlbumPlayer";
 import { Gallery } from "@/components/Gallery";
-import { SocialButtons } from "@/components/SocialButtons";
+import { LyricBook } from "@/components/LyricBook";
+import { SocialIconButtons } from "@/components/SocialIconButtons";
 import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
@@ -13,13 +14,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "My Fake Life — a 23-track album from CannaBusTeD. Songs, stories, signals. Stream every track, read every lyric, walk through the world the album was written from.",
+          "My Fake Life — a 23-track concept album from CannaBusTeD. Songs, videos, lyrics, artwork and the odd uncomfortable truth.",
       },
       { property: "og:title", content: "CannaBusTeD — My Fake Life" },
       {
         property: "og:description",
         content:
-          "A 23-track album from CannaBusTeD. Stream every track, read every lyric, step inside the worn world it was written from.",
+          "Step inside a strange little world of music, masks, memory, humour and hurt. A 23-track concept album from CannaBusTeD.",
       },
       { property: "og:type", content: "music.album" },
       { property: "og:image", content: heroAsset.url },
@@ -36,14 +37,14 @@ function AlbumSite() {
     <div className="relative min-h-screen text-foreground overflow-x-clip">
       {/* Top nav */}
       <header className="relative z-20">
-        <div className="max-w-6xl mx-auto px-5 py-5 flex items-center justify-between">
-          <a href="#top" className="font-display text-xl tracking-wide text-parchment">
+        <div className="max-w-6xl mx-auto px-5 py-5 flex items-center justify-between gap-3">
+          <a href="#top" className="font-display text-xl tracking-wide text-parchment shrink-0">
             CannaBus<span className="text-ember">TeD</span>
           </a>
           <nav className="hidden sm:flex gap-7 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-            <a href="#gallery" className="hover:text-ember transition">Gallery</a>
-            <a href="#album" className="hover:text-ember transition">Album</a>
-            <a href="#tracks" className="hover:text-ember transition">Tracks</a>
+            <a href="#tracks" className="hover:text-ember transition">Listen</a>
+            <a href="#gallery" className="hover:text-ember transition">Videos</a>
+            <a href="#lyricbook" className="hover:text-ember transition">Lyric Book</a>
             <a href="#about" className="hover:text-ember transition">About</a>
             <a href="#press" className="hover:text-ember transition">Press</a>
           </nav>
@@ -61,59 +62,37 @@ function AlbumSite() {
             />
             <div className="absolute inset-0 vignette pointer-events-none" />
           </div>
-          <div className="absolute inset-x-0 bottom-3 sm:bottom-10 flex justify-center pointer-events-none">
-            <div className="font-mono text-[10px] sm:text-xs tracking-[0.5em] uppercase text-parchment/80 bg-background/40 backdrop-blur px-4 py-2 rounded-sm border border-border/60">
-              Musician · Writer · Storyteller · Truth Digger
+          <div className="absolute inset-x-0 bottom-3 sm:bottom-10 flex justify-center pointer-events-none px-3">
+            <div className="font-mono text-[10px] sm:text-xs tracking-[0.5em] uppercase text-parchment/80 bg-background/40 backdrop-blur px-4 py-2 rounded-sm border border-border/60 text-center">
+              Musician · Writer · Storyteller
             </div>
           </div>
         </div>
 
         <div className="max-w-3xl mx-auto px-6 text-center mt-10 sm:mt-16">
-          <p className="font-script text-ember text-2xl">a new album</p>
+          <p className="font-script text-ember text-2xl">welcome to</p>
           <h1 className="font-display text-5xl sm:text-7xl text-parchment mt-2 tracking-tight text-balance">
             My Fake Life
           </h1>
           <div className="ink-rule w-40 mx-auto my-6" />
-          <p className="font-display text-lg sm:text-xl text-parchment/80 leading-relaxed text-balance">
-            Twenty-three songs about the masks we wear, the rooms we leave, and the small honest sounds
-            that escape anyway. Follow the thread. Find the truth. Write the next verse.
+          <p className="font-display text-lg sm:text-xl text-parchment/85 leading-relaxed text-balance italic">
+            Step inside a strange little world of music, masks, memory, humour and hurt.
+            <span className="not-italic"> My Fake Life</span> is a 23-track concept album built from
+            songs, videos, lyrics, artwork — and the odd uncomfortable truth.
           </p>
-          <div className="mt-8 flex flex-wrap gap-3 justify-center">
-            <a
-              href="#gallery"
-              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-ember transition px-6 py-3 font-mono text-xs uppercase tracking-[0.3em] rounded-sm shadow-lg shadow-primary/30"
-            >
-              ▶ Watch the videos
-            </a>
-            <a
-              href="#tracks"
-              className="inline-flex items-center gap-2 border border-border/70 hover:border-ember hover:text-ember transition px-6 py-3 font-mono text-xs uppercase tracking-[0.3em] rounded-sm"
-            >
-              Listen to the album
-            </a>
-            <a
-              href="#about"
-              className="inline-flex items-center gap-2 border border-border/70 hover:border-ember hover:text-ember transition px-6 py-3 font-mono text-xs uppercase tracking-[0.3em] rounded-sm"
-            >
-              Read the story
-            </a>
+
+          {/* Main worn-poster buttons */}
+          <div className="mt-9 flex flex-wrap gap-3 sm:gap-4 justify-center">
+            <a href="#gallery" className="btn-poster">▶ Watch the videos</a>
+            <a href="#tracks" className="btn-poster btn-poster--ember">♪ Listen to the album</a>
+            <a href="#about" className="btn-poster">✎ Read the story</a>
           </div>
-          <div className="mt-6 flex justify-center">
-            <SocialButtons />
+
+          {/* Platform buttons */}
+          <div className="mt-7">
+            <SocialIconButtons />
           </div>
         </div>
-
-        {/* Gallery */}
-        <section id="gallery" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32">
-          <div className="text-center mb-10">
-            <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
-              Watch The Videos
-            </div>
-            <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">The Gallery</h2>
-            <p className="font-script text-ember text-xl mt-1">every cover is a doorway</p>
-          </div>
-          <Gallery />
-        </section>
       </section>
 
       {/* Album panel */}
@@ -162,8 +141,8 @@ function AlbumSite() {
         </div>
       </section>
 
-      {/* Player + tracks */}
-      <section id="tracks" className="relative z-10 max-w-5xl mx-auto px-5 mt-24 sm:mt-32">
+      {/* Tracklist (moved ABOVE gallery) */}
+      <section id="tracks" className="relative z-10 max-w-5xl mx-auto px-5 mt-24 sm:mt-32 scroll-mt-20">
         <div className="text-center mb-10">
           <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
             Signal Routing
@@ -174,8 +153,32 @@ function AlbumSite() {
         <AlbumPlayer />
       </section>
 
+      {/* Video Gallery (now AFTER tracklist) */}
+      <section id="gallery" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32 scroll-mt-20">
+        <div className="text-center mb-10">
+          <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
+            Watch The Videos
+          </div>
+          <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">The Gallery</h2>
+          <p className="font-script text-ember text-xl mt-1">every cover is a doorway</p>
+        </div>
+        <Gallery />
+      </section>
+
+      {/* Lyric Book — horizontal */}
+      <section id="lyricbook" className="relative z-10 mt-24 sm:mt-32 scroll-mt-20">
+        <div className="max-w-6xl mx-auto px-5 text-center mb-10">
+          <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
+            Inside The Album
+          </div>
+          <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">The My Fake Life Lyric Book</h2>
+          <p className="font-script text-ember text-xl mt-1">turn the pages — the room turns with you</p>
+        </div>
+        <LyricBook />
+      </section>
+
       {/* About */}
-      <section id="about" className="relative z-10 mt-28 sm:mt-36">
+      <section id="about" className="relative z-10 mt-28 sm:mt-36 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-3 sm:px-6">
           <div className="relative rounded-sm overflow-hidden ring-1 ring-border/60">
             <img
@@ -215,7 +218,7 @@ function AlbumSite() {
       </section>
 
       {/* Press / Quotes */}
-      <section id="press" className="relative z-10 max-w-5xl mx-auto px-5 mt-28 sm:mt-36">
+      <section id="press" className="relative z-10 max-w-5xl mx-auto px-5 mt-28 sm:mt-36 scroll-mt-20">
         <div className="text-center mb-10">
           <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
             From The Margins
@@ -248,10 +251,11 @@ function AlbumSite() {
             CannaBus<span className="text-ember">TeD</span>
           </div>
           <div className="font-script text-ember text-xl -mt-2">My Fake Life</div>
-          <SocialButtons />
-          <div className="flex gap-6 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
-            <a href="#gallery" className="hover:text-ember">Watch</a>
+          <SocialIconButtons />
+          <div className="flex flex-wrap justify-center gap-6 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
             <a href="#tracks" className="hover:text-ember">Listen</a>
+            <a href="#gallery" className="hover:text-ember">Watch</a>
+            <a href="#lyricbook" className="hover:text-ember">Lyric Book</a>
             <a href="#about" className="hover:text-ember">About</a>
             <a href="#press" className="hover:text-ember">Press</a>
           </div>
