@@ -132,4 +132,72 @@
     background: linear-gradient(90deg, transparent, oklch(0.5 0.12 28 / 0.7), transparent);
     height: 1px;
   }
+
+  /* Worn theatre-poster button — gritty, cinematic, textured */
+  .btn-poster {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.6rem;
+    min-height: 52px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: oklch(0.92 0.04 80);
+    background-color: oklch(0.24 0.04 32);
+    background-image:
+      radial-gradient(ellipse at 20% 10%, oklch(0.38 0.08 35 / 0.6), transparent 60%),
+      radial-gradient(ellipse at 80% 90%, oklch(0.18 0.04 28 / 0.85), transparent 60%),
+      var(--grain);
+    border: 1px solid oklch(0.42 0.08 35 / 0.55);
+    border-radius: 2px;
+    box-shadow:
+      inset 0 0 30px oklch(0.08 0.01 30 / 0.85),
+      inset 0 1px 0 oklch(0.55 0.08 60 / 0.18),
+      0 6px 20px oklch(0.05 0.01 30 / 0.6);
+    text-shadow: 0 1px 0 oklch(0.05 0.01 30 / 0.8);
+    transition: transform 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    isolation: isolate;
+  }
+  .btn-poster::before,
+  .btn-poster::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+  .btn-poster::before {
+    background-image: var(--grain);
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+  }
+  .btn-poster::after {
+    box-shadow: inset 0 0 60px 6px oklch(0.04 0.01 30 / 0.7);
+  }
+  .btn-poster:hover {
+    color: oklch(0.95 0.06 75);
+    transform: translateY(-1px) rotate(-0.2deg);
+    box-shadow:
+      inset 0 0 30px oklch(0.08 0.01 30 / 0.8),
+      inset 0 1px 0 oklch(0.65 0.12 60 / 0.25),
+      0 10px 28px oklch(0.05 0.01 30 / 0.8),
+      0 0 0 1px oklch(0.55 0.18 35 / 0.6);
+  }
+  .btn-poster--ember {
+    background-color: oklch(0.34 0.12 30);
+    background-image:
+      radial-gradient(ellipse at 30% 0%, oklch(0.55 0.18 35 / 0.55), transparent 65%),
+      radial-gradient(ellipse at 100% 100%, oklch(0.18 0.06 28 / 0.85), transparent 60%),
+      var(--grain);
+    border-color: oklch(0.55 0.16 32 / 0.65);
+  }
+
+  /* Hide horizontal scrollbar on lyric book for cleaner art-book feel */
+  .lyricbook-scroller { scrollbar-width: thin; scrollbar-color: oklch(0.4 0.06 35 / 0.5) transparent; }
+  .lyricbook-scroller::-webkit-scrollbar { height: 6px; }
+  .lyricbook-scroller::-webkit-scrollbar-thumb { background: oklch(0.4 0.06 35 / 0.5); border-radius: 999px; }
+  .lyricbook-scroller::-webkit-scrollbar-track { background: transparent; }
 }
