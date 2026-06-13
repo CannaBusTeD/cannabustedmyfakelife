@@ -26,6 +26,8 @@ import page24 from "@/assets/lyricbook/page-24.png.asset.json";
 import page25 from "@/assets/lyricbook/page-25.png.asset.json";
 import page26 from "@/assets/lyricbook/page-26.png.asset.json";
 import page27 from "@/assets/lyricbook/page-27.png.asset.json";
+import page28 from "@/assets/lyricbook/page-28.png.asset.json";
+import page29 from "@/assets/lyricbook/page-29.png.asset.json";
 
 export interface LyricBookPage {
   id: string;
@@ -59,10 +61,12 @@ export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
   { id: "page-21", title: "The Hard Way", caption: "page twenty-one", src: page21.url },
   { id: "page-22", title: "The Hard Way", caption: "page twenty-two — continued", src: page22.url },
   { id: "page-23", title: "Hold Them Loose", caption: "page twenty-three", src: page23.url },
-  { id: "page-24", title: "Hold Them Loose", caption: "page twenty-four — continued", src: page24.url },
-  { id: "page-25", title: "The Easy Way", caption: "page twenty-five", src: page25.url },
+  { id: "page-24", title: "The Easy Way", caption: "page twenty-four", src: page24.url },
+  { id: "page-25", title: "The Easy Way", caption: "page twenty-five — continued", src: page25.url },
   { id: "page-26", title: "Too Many Times", caption: "page twenty-six", src: page26.url },
   { id: "page-27", title: "Too Many Times", caption: "page twenty-seven — continued", src: page27.url },
-
+  { id: "page-28", title: "When Memories Break Your Heart", caption: "page twenty-eight", src: page28.url },
+  { id: "page-29", title: "When Memories Break Your Heart", caption: "page twenty-nine — continued", src: page29.url },
 ];
+
 
