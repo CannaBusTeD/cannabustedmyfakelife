@@ -269,6 +269,17 @@ function AlbumSite() {
             <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">Contact TeD</span>
             <span className="font-display text-parchment italic">CannaBusTeD@icloud.com</span>
           </a>
+          <a
+            href="https://paypal.me/CannaBusTeD"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Donate to CannaBusTeD via PayPal"
+            className="inline-flex items-center gap-2 rounded-sm border border-border/50 bg-background/40 px-3 py-1.5 text-[10px] font-mono uppercase tracking-[0.3em] text-parchment/70 shadow-md transition hover:border-ember/60 hover:text-ember sm:mr-4"
+          >
+            <span className="text-ember">✦</span>
+            <span>DonaTeD</span>
+            <span className="text-parchment/40 normal-case tracking-normal">· paypal.me/CannaBusTeD</span>
+          </a>
         </div>
       </section>
 
