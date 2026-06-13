@@ -153,6 +153,22 @@ function AlbumSite() {
           <p className="font-script text-ember text-xl mt-1">listen close, the room is listening back</p>
         </div>
         <AlbumPlayer />
+
+        {/* Tracklist poster — rear cover hallway with sides A/B/C/D */}
+        <figure className="mt-14 sm:mt-20 mx-auto max-w-3xl">
+          <div className="relative ring-1 ring-border/60 shadow-2xl overflow-hidden bg-card">
+            <img
+              src={tracklistPoster.url}
+              alt="My Fake Life — tracklist hallway: framed Side A/B/C/D listings on worn wallpaper"
+              loading="lazy"
+              className="w-full h-auto block"
+            />
+            <div className="absolute inset-0 vignette pointer-events-none" />
+          </div>
+          <figcaption className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            The Descent · The Release — Sides A / B / C / D
+          </figcaption>
+        </figure>
       </section>
 
       {/* Video Gallery (now AFTER tracklist) */}
