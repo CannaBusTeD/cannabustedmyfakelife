@@ -6,6 +6,8 @@ import { SocialIconButtons } from "@/components/SocialIconButtons";
 import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
+import innerSleeve from "@/assets/site/inner-sleeve.png.asset.json";
+import tracklistPoster from "@/assets/site/tracklist-poster.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -100,8 +102,8 @@ function AlbumSite() {
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-10 items-center">
           <div className="relative">
             <img
-              src={albumCover.url}
-              alt="My Fake Life album cover — two figures in a worn sepia-walled room"
+              src={innerSleeve.url}
+              alt="My Fake Life — inner sleeve: a figure at a worn vanity mirror surrounded by handwritten lyric fragments"
               className="w-full h-auto shadow-2xl ring-1 ring-oxblood/40"
             />
             <div className="absolute -inset-3 -z-10 bg-gradient-to-br from-oxblood/40 to-transparent blur-2xl" />
@@ -151,6 +153,22 @@ function AlbumSite() {
           <p className="font-script text-ember text-xl mt-1">listen close, the room is listening back</p>
         </div>
         <AlbumPlayer />
+
+        {/* Tracklist poster — rear cover hallway with sides A/B/C/D */}
+        <figure className="mt-14 sm:mt-20 mx-auto max-w-3xl">
+          <div className="relative ring-1 ring-border/60 shadow-2xl overflow-hidden bg-card">
+            <img
+              src={tracklistPoster.url}
+              alt="My Fake Life — tracklist hallway: framed Side A/B/C/D listings on worn wallpaper"
+              loading="lazy"
+              className="w-full h-auto block"
+            />
+            <div className="absolute inset-0 vignette pointer-events-none" />
+          </div>
+          <figcaption className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            The Descent · The Release — Sides A / B / C / D
+          </figcaption>
+        </figure>
       </section>
 
       {/* Video Gallery (now AFTER tracklist) */}
