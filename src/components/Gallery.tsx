@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { tracks } from "@/data/tracks";
 import { VIDEO_IDS } from "@/data/videos";
 import { VideoModal } from "@/components/VideoModal";
+import { SecretVoiceTile } from "@/components/SecretVoiceTile";
 
 export function Gallery() {
   const [open, setOpen] = useState<{ videoId: string; title: string } | null>(null);
