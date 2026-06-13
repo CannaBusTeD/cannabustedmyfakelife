@@ -217,19 +217,23 @@ function AlbumSite() {
         </div>
       </section>
 
-      {/* Press / Quotes */}
+      {/* Quotable Lyric Tag Lines */}
       <section id="press" className="relative z-10 max-w-5xl mx-auto px-5 mt-28 sm:mt-36 scroll-mt-20">
         <div className="text-center mb-10">
           <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
-            From The Margins
+            From The Album
           </div>
-          <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">Words From The Album</h2>
+          <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">Quotable Lyric Tag Lines</h2>
+          <p className="font-script text-ember text-xl mt-1">lines that wouldn't leave the room</p>
         </div>
-        <div className="grid sm:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {[
-            { q: "The song disappears into what it disturbed, and the disturbance keeps singing.", t: "—  liner notes" },
+            { q: "The room I'm building now has never charged me for the entry.", t: "— Where I Fit" },
+            { q: "Like the echo of applause that fades before it finds the rafters.", t: "— Where I Fit" },
+            { q: "I smiled, like they'd explained the weather to a matchstick.", t: "— Where I Fit" },
+            { q: "Every version of me, moving through the bruise.", t: "— Every Version Of Me" },
+            { q: "Doesn't fall too far behind.", t: "— Where I Fit" },
             { q: "I write to make sense of the noise.", t: "— CannaBusTeD" },
-            { q: "Not just songs. Stories. Signals. Connection.", t: "— studio wall" },
           ].map((c) => (
             <figure key={c.q} className="wallpaper-panel rounded-sm p-6 relative">
               <div className="absolute inset-0 vignette pointer-events-none" />
