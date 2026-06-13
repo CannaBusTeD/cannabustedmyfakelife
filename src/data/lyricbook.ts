@@ -1,3 +1,5 @@
+import bookCoverFront from "@/assets/lyricbook/book-cover-front.png.asset.json";
+import bookCoverBack from "@/assets/lyricbook/book-cover-back.png.asset.json";
 import coverFront from "@/assets/lyricbook/cover-front.png.asset.json";
 import page01 from "@/assets/lyricbook/page-01.png.asset.json";
 import page02 from "@/assets/lyricbook/page-02.png.asset.json";
@@ -54,7 +56,8 @@ export interface LyricBookPage {
 }
 
 export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
-  { id: "cover-front", title: "My Fake Lyrics", caption: "front cover", src: coverFront.url },
+  { id: "book-cover-front", title: "TeD", caption: "front cover", src: bookCoverFront.url },
+  { id: "intro", title: "My Fake Lyrics", caption: "introduction", src: coverFront.url },
   { id: "page-01", title: "My Fake Life", caption: "page one", src: page01.url },
   { id: "page-02", title: "My Fake Life", caption: "page two — continued", src: page02.url },
   { id: "page-03", title: "Where I Fit", caption: "page three", src: page03.url },
