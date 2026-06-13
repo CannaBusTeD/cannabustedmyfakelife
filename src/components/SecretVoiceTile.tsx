@@ -1,6 +1,6 @@
 import busAsset from "@/assets/site/voice-bus.png.asset.json";
 
-const VOICE_URL = "https://thevoice.canabuster.com";
+const VOICE_URL = "https://thevoice.cannabusted.com";
 
 type Variant = "tile" | "doorway";
 
