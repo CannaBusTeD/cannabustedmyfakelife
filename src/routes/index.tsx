@@ -6,6 +6,8 @@ import { SocialIconButtons } from "@/components/SocialIconButtons";
 import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
+import innerSleeve from "@/assets/site/inner-sleeve.png.asset.json";
+import tracklistPoster from "@/assets/site/tracklist-poster.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
