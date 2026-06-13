@@ -21,6 +21,7 @@ import page19 from "@/assets/lyricbook/page-19.png.asset.json";
 import page20 from "@/assets/lyricbook/page-20.png.asset.json";
 import page21 from "@/assets/lyricbook/page-21.png.asset.json";
 import page22 from "@/assets/lyricbook/page-22.png.asset.json";
+import page22b from "@/assets/lyricbook/page-22b.png.asset.json";
 import page23 from "@/assets/lyricbook/page-23.png.asset.json";
 import page24 from "@/assets/lyricbook/page-24.png.asset.json";
 import page25 from "@/assets/lyricbook/page-25.png.asset.json";
@@ -59,7 +60,8 @@ export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
   { id: "page-19", title: "Everybody Has Nobody", caption: "page nineteen", src: page19.url },
   { id: "page-20", title: "Everybody Has Nobody", caption: "page twenty — continued", src: page20.url },
   { id: "page-21", title: "The Hard Way", caption: "page twenty-one", src: page21.url },
-  { id: "page-22", title: "The Hard Way", caption: "page twenty-two — continued", src: page22.url },
+  { id: "page-22b", title: "The Hard Way", caption: "page twenty-two — continued", src: page22b.url },
+  { id: "page-22", title: "The Hard Way", caption: "page twenty-three — continued", src: page22.url },
   { id: "page-23", title: "Hold Them Loose", caption: "page twenty-three", src: page23.url },
   { id: "page-24", title: "The Easy Way", caption: "page twenty-four", src: page24.url },
   { id: "page-25", title: "The Easy Way", caption: "page twenty-five — continued", src: page25.url },
