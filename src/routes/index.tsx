@@ -253,6 +253,15 @@ function AlbumSite() {
         </div>
       </section>
 
+      {/* Secret doorway — The Voice */}
+      <section aria-label="Hidden route" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32">
+        <SecretVoiceTile
+          variant="doorway"
+          label="There's Another Door"
+          caption="An unlisted route · The Voice"
+        />
+      </section>
+
       {/* Quotable Lyric Tag Lines */}
       <section id="press" className="relative z-10 max-w-5xl mx-auto px-5 mt-28 sm:mt-36 scroll-mt-20">
         <div className="text-center mb-10">
