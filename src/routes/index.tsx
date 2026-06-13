@@ -3,6 +3,7 @@ import { AlbumPlayer } from "@/components/AlbumPlayer";
 import { Gallery } from "@/components/Gallery";
 import { LyricBook } from "@/components/LyricBook";
 import { SocialIconButtons } from "@/components/SocialIconButtons";
+import { SecretVoiceTile } from "@/components/SecretVoiceTile";
 import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
@@ -250,6 +251,15 @@ function AlbumSite() {
             </p>
           </div>
         </div>
+      </section>
+
+      {/* Secret doorway — The Voice */}
+      <section aria-label="Hidden route" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32">
+        <SecretVoiceTile
+          variant="doorway"
+          label="There's Another Door"
+          caption="An unlisted route · The Voice"
+        />
       </section>
 
       {/* Quotable Lyric Tag Lines */}
