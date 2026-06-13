@@ -35,6 +35,10 @@ import page30 from "@/assets/lyricbook/page-30.png.asset.json";
 import page31 from "@/assets/lyricbook/page-31.png.asset.json";
 import page32 from "@/assets/lyricbook/page-32.png.asset.json";
 import page33 from "@/assets/lyricbook/page-33.png.asset.json";
+import page34 from "@/assets/lyricbook/page-34.png.asset.json";
+import page35 from "@/assets/lyricbook/page-35.png.asset.json";
+import page36 from "@/assets/lyricbook/page-36.png.asset.json";
+import page37 from "@/assets/lyricbook/page-37.png.asset.json";
 
 export interface LyricBookPage {
   id: string;
@@ -81,6 +85,10 @@ export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
   { id: "page-31", title: "Self Respect", caption: "page thirty-four — continued", src: page31.url },
   { id: "page-32", title: "I’m Only A Song", caption: "page thirty-five", src: page32.url },
   { id: "page-33", title: "I’m Only A Song", caption: "page thirty-six — continued", src: page33.url },
+  { id: "page-34", title: "Strange Little Things", caption: "page thirty-seven", src: page34.url },
+  { id: "page-35", title: "Strange Little Things", caption: "page thirty-eight — continued", src: page35.url },
+  { id: "page-36", title: "My Light", caption: "page thirty-nine", src: page36.url },
+  { id: "page-37", title: "My Light", caption: "page forty — continued", src: page37.url },
 ];
 
 
