@@ -229,7 +229,7 @@ function AlbumSite() {
             The Bus is now boarding
           </div>
           <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment text-center text-balance">
-            Songs, stories, signals.
+            Songs, Stories, Signals.
           </h2>
           <div className="ink-rule w-32 mx-auto my-6" />
           <div className="space-y-5 text-parchment/85 leading-relaxed text-lg">
