@@ -182,6 +182,22 @@ function AlbumSite() {
           <p className="font-script text-ember text-xl mt-1">every cover is a doorway</p>
         </div>
         <Gallery />
+
+        {/* Inner sleeve — moved here, after the gallery */}
+        <figure className="mt-14 sm:mt-20 mx-auto max-w-3xl">
+          <div className="relative ring-1 ring-border/60 shadow-2xl overflow-hidden bg-card">
+            <img
+              src={innerSleeve.url}
+              alt="My Fake Life — inner sleeve: a figure at a worn vanity mirror surrounded by handwritten lyric fragments"
+              loading="lazy"
+              className="w-full h-auto block"
+            />
+            <div className="absolute inset-0 vignette pointer-events-none" />
+          </div>
+          <figcaption className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            Inner Sleeve — the room behind the mirror
+          </figcaption>
+        </figure>
       </section>
 
       {/* Lyric Book — horizontal */}
