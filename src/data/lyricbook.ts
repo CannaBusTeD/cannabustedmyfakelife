@@ -104,6 +104,7 @@ export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
   { id: "page-41", title: "Thoughtism", caption: "page forty-four — continued", src: page41.url },
   { id: "page-42", title: "The Legacy", caption: "page forty-five", src: page42.url },
   { id: "page-43", title: "The Legacy", caption: "page forty-six — continued", src: page43.url },
+  { id: "book-cover-back", title: "then…", caption: "back cover", src: bookCoverBack.url },
 ];
 
 
