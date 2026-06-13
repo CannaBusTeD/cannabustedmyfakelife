@@ -24,6 +24,8 @@ import page22 from "@/assets/lyricbook/page-22.png.asset.json";
 import page23 from "@/assets/lyricbook/page-23.png.asset.json";
 import page24 from "@/assets/lyricbook/page-24.png.asset.json";
 import page25 from "@/assets/lyricbook/page-25.png.asset.json";
+import page26 from "@/assets/lyricbook/page-26.png.asset.json";
+import page27 from "@/assets/lyricbook/page-27.png.asset.json";
 
 export interface LyricBookPage {
   id: string;
@@ -59,6 +61,8 @@ export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
   { id: "page-23", title: "Hold Them Loose", caption: "page twenty-three", src: page23.url },
   { id: "page-24", title: "Hold Them Loose", caption: "page twenty-four — continued", src: page24.url },
   { id: "page-25", title: "The Easy Way", caption: "page twenty-five", src: page25.url },
+  { id: "page-26", title: "Too Many Times", caption: "page twenty-six", src: page26.url },
+  { id: "page-27", title: "Too Many Times", caption: "page twenty-seven — continued", src: page27.url },
 
 ];
 
