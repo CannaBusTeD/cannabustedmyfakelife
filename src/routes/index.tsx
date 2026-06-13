@@ -103,8 +103,8 @@ function AlbumSite() {
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-10 items-center">
           <div className="relative">
             <img
-              src={innerSleeve.url}
-              alt="My Fake Life — inner sleeve: a figure at a worn vanity mirror surrounded by handwritten lyric fragments"
+              src={albumBanner.url}
+              alt="My Fake Life — double album banner: two figures, worn wall, scattered lyric fragments and stage curtains"
               className="w-full h-auto shadow-2xl ring-1 ring-oxblood/40"
             />
             <div className="absolute -inset-3 -z-10 bg-gradient-to-br from-oxblood/40 to-transparent blur-2xl" />
