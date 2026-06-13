@@ -255,12 +255,23 @@ function AlbumSite() {
 
       {/* Secret doorway — The Voice */}
       <section aria-label="Hidden route" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32">
-        <SecretVoiceTile
-          variant="doorway"
-          label="There's Another Door"
-          caption="An unlisted route · The Voice"
-        />
+        <div className="flex flex-col items-center gap-4 sm:items-end">
+          <SecretVoiceTile
+            variant="doorway"
+            label="There's Another Door"
+            caption="An unlisted route · The Voice"
+          />
+          <a
+            href="mailto:CannaBusTeD@icloud.com"
+            aria-label="Email CannaBusTeD"
+            className="wallpaper-panel inline-flex items-center gap-3 rounded-sm border border-border/60 px-4 py-3 text-left shadow-xl transition hover:border-ember/60 sm:mr-4"
+          >
+            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">Contact TeD</span>
+            <span className="font-display text-parchment italic">CannaBusTeD@icloud.com</span>
+          </a>
+        </div>
       </section>
+
 
       {/* Quotable Lyric Tag Lines */}
       <section id="press" className="relative z-10 max-w-5xl mx-auto px-5 mt-28 sm:mt-36 scroll-mt-20">

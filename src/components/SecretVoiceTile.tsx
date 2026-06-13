@@ -58,7 +58,7 @@ export function SecretVoiceTile({
     );
   }
 
-  // Doorway variant: bottom-right discovered bus stop
+  // Doorway variant: smaller floating discovered bus stop
   return (
     <div className="flex justify-center sm:justify-end">
       <a
@@ -66,10 +66,10 @@ export function SecretVoiceTile({
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Open The Voice by CannaBusTeD in a new tab"
-        className="group relative block w-full max-w-sm sm:max-w-md overflow-hidden rounded-sm ring-1 ring-ember/30 hover:ring-ember/70 transition shadow-2xl"
+        className="group relative block w-[15rem] sm:w-[17rem] overflow-hidden rounded-sm ring-1 ring-ember/30 hover:ring-ember/70 transition shadow-2xl sm:translate-y-6"
         style={{ transform: "rotate(-1.2deg)" }}
       >
-        <div className="relative aspect-square overflow-hidden">
+        <div className="relative aspect-[4/5] overflow-hidden">
           <img
             src={busAsset.url}
             alt="Secret bus route link to The Voice by CannaBusTeD"
@@ -77,28 +77,29 @@ export function SecretVoiceTile({
             className="absolute inset-0 w-full h-full object-cover object-center transition duration-700 group-hover:scale-[1.03]"
             style={{ filter: "sepia(0.25) contrast(1.08) brightness(0.82)" }}
           />
-          <div className="absolute inset-0 pointer-events-none"
+          <div
+            className="absolute inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(circle at 50% 35%, rgba(255,190,120,0.12), transparent 50%), linear-gradient(to top, rgba(0,0,0,0.9), transparent 60%)",
+                "radial-gradient(circle at 50% 35%, rgba(255,190,120,0.12), transparent 50%), linear-gradient(to top, rgba(0,0,0,0.92), transparent 62%)",
             }}
           />
           <div className="absolute inset-0 vignette pointer-events-none" />
-          <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-            <span className="font-mono text-[9px] tracking-[0.4em] uppercase text-parchment/70 bg-background/50 backdrop-blur px-2 py-1 rounded-sm border border-border/40">
+          <div className="absolute top-3 left-3 right-3 flex items-center justify-between gap-2">
+            <span className="font-mono text-[8px] tracking-[0.35em] uppercase text-parchment/70 bg-background/50 backdrop-blur px-2 py-1 rounded-sm border border-border/40">
               Route · Unlisted
             </span>
-            <span className="font-mono text-[9px] tracking-[0.4em] uppercase text-ember/90 bg-background/50 backdrop-blur px-2 py-1 rounded-sm border border-ember/30">
+            <span className="font-mono text-[8px] tracking-[0.35em] uppercase text-ember/90 bg-background/50 backdrop-blur px-2 py-1 rounded-sm border border-ember/30">
               One Way
             </span>
           </div>
-          <div className="absolute bottom-0 left-0 right-0 p-5">
-            <div className="font-script text-ember text-xl">still listening?</div>
-            <div className="font-display text-2xl sm:text-3xl text-parchment text-balance leading-tight mt-1 italic">
+          <div className="absolute bottom-0 left-0 right-0 p-4">
+            <div className="font-script text-ember text-lg">still listening?</div>
+            <div className="font-display text-xl sm:text-2xl text-parchment text-balance leading-tight mt-1 italic">
               {label}
             </div>
             {caption && (
-              <div className="mt-2 font-mono text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
+              <div className="mt-2 font-mono text-[9px] tracking-[0.28em] uppercase text-muted-foreground">
                 {caption}
               </div>
             )}
