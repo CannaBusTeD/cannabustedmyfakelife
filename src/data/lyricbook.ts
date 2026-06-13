@@ -58,7 +58,7 @@ export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
   { id: "page-22", title: "The Hard Way", caption: "page twenty-two — continued", src: page22.url },
   { id: "page-23", title: "Hold Them Loose", caption: "page twenty-three", src: page23.url },
   { id: "page-24", title: "Hold Them Loose", caption: "page twenty-four — continued", src: page24.url },
-  { id: "page-25", title: "The Easy Way", caption: "page twenty-five", src: page24.url },
-  { id: "page-26", title: "The Easy Way", caption: "page twenty-six — continued", src: page25.url },
+  { id: "page-25", title: "The Easy Way", caption: "page twenty-five", src: page25.url },
+
 ];
 
