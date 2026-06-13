@@ -35,6 +35,10 @@ import page30 from "@/assets/lyricbook/page-30.png.asset.json";
 import page31 from "@/assets/lyricbook/page-31.png.asset.json";
 import page32 from "@/assets/lyricbook/page-32.png.asset.json";
 import page33 from "@/assets/lyricbook/page-33.png.asset.json";
+import page34 from "@/assets/lyricbook/page-34.png.asset.json";
+import page35 from "@/assets/lyricbook/page-35.png.asset.json";
+import page36 from "@/assets/lyricbook/page-36.png.asset.json";
+import page37 from "@/assets/lyricbook/page-37.png.asset.json";
 
 export interface LyricBookPage {
   id: string;
