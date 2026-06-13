@@ -24,6 +24,8 @@ import page22 from "@/assets/lyricbook/page-22.png.asset.json";
 import page23 from "@/assets/lyricbook/page-23.png.asset.json";
 import page24 from "@/assets/lyricbook/page-24.png.asset.json";
 import page25 from "@/assets/lyricbook/page-25.png.asset.json";
+import page26 from "@/assets/lyricbook/page-26.png.asset.json";
+import page27 from "@/assets/lyricbook/page-27.png.asset.json";
 
 export interface LyricBookPage {
   id: string;
