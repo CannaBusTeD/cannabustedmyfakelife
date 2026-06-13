@@ -7,6 +7,7 @@ import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
 import innerSleeve from "@/assets/site/inner-sleeve.png.asset.json";
+import albumBanner from "@/assets/site/album-banner.png.asset.json";
 import tracklistPoster from "@/assets/site/tracklist-poster.png.asset.json";
 
 export const Route = createFileRoute("/")({
@@ -102,8 +103,8 @@ function AlbumSite() {
         <div className="grid md:grid-cols-[1fr_1.2fr] gap-10 items-center">
           <div className="relative">
             <img
-              src={innerSleeve.url}
-              alt="My Fake Life — inner sleeve: a figure at a worn vanity mirror surrounded by handwritten lyric fragments"
+              src={albumBanner.url}
+              alt="My Fake Life — double album banner: two figures, worn wall, scattered lyric fragments and stage curtains"
               className="w-full h-auto shadow-2xl ring-1 ring-oxblood/40"
             />
             <div className="absolute -inset-3 -z-10 bg-gradient-to-br from-oxblood/40 to-transparent blur-2xl" />
@@ -181,6 +182,22 @@ function AlbumSite() {
           <p className="font-script text-ember text-xl mt-1">every cover is a doorway</p>
         </div>
         <Gallery />
+
+        {/* Inner sleeve — moved here, after the gallery */}
+        <figure className="mt-14 sm:mt-20 mx-auto max-w-3xl">
+          <div className="relative ring-1 ring-border/60 shadow-2xl overflow-hidden bg-card">
+            <img
+              src={innerSleeve.url}
+              alt="My Fake Life — inner sleeve: a figure at a worn vanity mirror surrounded by handwritten lyric fragments"
+              loading="lazy"
+              className="w-full h-auto block"
+            />
+            <div className="absolute inset-0 vignette pointer-events-none" />
+          </div>
+          <figcaption className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            Inner Sleeve — the room behind the mirror
+          </figcaption>
+        </figure>
       </section>
 
       {/* Lyric Book — horizontal */}
@@ -212,7 +229,7 @@ function AlbumSite() {
             The Bus is now boarding
           </div>
           <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment text-center text-balance">
-            Songs, stories, signals.
+            Songs, Stories, Signals.
           </h2>
           <div className="ink-rule w-32 mx-auto my-6" />
           <div className="space-y-5 text-parchment/85 leading-relaxed text-lg">
