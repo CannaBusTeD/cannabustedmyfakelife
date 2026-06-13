@@ -255,31 +255,34 @@ function AlbumSite() {
 
       {/* Secret doorway — The Voice */}
       <section aria-label="Hidden route" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32">
-        <div className="flex flex-col items-center gap-4 sm:items-end">
-          <SecretVoiceTile
-            variant="doorway"
-            label="There's Another Door"
-            caption="An unlisted route · The Voice"
-          />
-          <a
-            href="mailto:CannaBusTeD@icloud.com"
-            aria-label="Email CannaBusTeD"
-            className="wallpaper-panel inline-flex items-center gap-3 rounded-sm border border-border/60 px-4 py-3 text-left shadow-xl transition hover:border-ember/60 sm:mr-4"
-          >
-            <span className="font-mono text-[10px] uppercase tracking-[0.32em] text-ember">Contact TeD</span>
-            <span className="font-display text-parchment italic">CannaBusTeD@icloud.com</span>
-          </a>
-          <a
-            href="https://paypal.me/CannaBusTeD"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Donate to CannaBusTeD via PayPal"
-            className="inline-flex items-center gap-2 rounded-sm border border-border/50 bg-background/40 px-3 py-1.5 text-[10px] font-mono uppercase tracking-[0.3em] text-parchment/70 shadow-md transition hover:border-ember/60 hover:text-ember sm:mr-4"
-          >
-            <span className="text-ember">✦</span>
-            <span>DonaTeD</span>
-            <span className="text-parchment/40 normal-case tracking-normal">· paypal.me/CannaBusTeD</span>
-          </a>
+        <div className="grid gap-6 items-center md:grid-cols-[minmax(0,1fr)_240px] md:gap-10">
+          <div className="flex justify-center md:justify-end">
+            <SecretVoiceTile
+              variant="doorway"
+              label="There's Another Door"
+              caption="An unlisted route · The Voice"
+            />
+          </div>
+          <div className="relative flex flex-col items-center gap-4 md:items-start">
+            <a
+              href="mailto:CannaBusTeD@icloud.com"
+              aria-label="Email CannaBusTeD"
+              className="btn-floating-note md:-rotate-2"
+            >
+              <span className="font-script text-2xl leading-none text-ember">Contact TeD</span>
+              <span className="text-sm text-parchment/80">CannaBusTeD@icloud.com</span>
+            </a>
+            <a
+              href="https://paypal.me/CannaBusTeD"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Donate to CannaBusTeD via PayPal"
+              className="btn-floating-note btn-floating-note--small md:ml-10 md:rotate-1"
+            >
+              <span className="font-script text-[1.7rem] leading-none text-ember">DonaTeD</span>
+              <span className="text-xs text-parchment/75">paypal.me/CannaBusTeD</span>
+            </a>
+          </div>
         </div>
       </section>
 

@@ -39,6 +39,12 @@ import page34 from "@/assets/lyricbook/page-34.png.asset.json";
 import page35 from "@/assets/lyricbook/page-35.png.asset.json";
 import page36 from "@/assets/lyricbook/page-36.png.asset.json";
 import page37 from "@/assets/lyricbook/page-37.png.asset.json";
+import page38 from "@/assets/lyricbook/page-38.png.asset.json";
+import page39 from "@/assets/lyricbook/page-39.png.asset.json";
+import page40 from "@/assets/lyricbook/page-40.png.asset.json";
+import page41 from "@/assets/lyricbook/page-41.png.asset.json";
+import page42 from "@/assets/lyricbook/page-42.png.asset.json";
+import page43 from "@/assets/lyricbook/page-43.png.asset.json";
 
 export interface LyricBookPage {
   id: string;
@@ -89,7 +95,14 @@ export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
   { id: "page-35", title: "Strange Little Things", caption: "page thirty-eight — continued", src: page35.url },
   { id: "page-36", title: "My Light", caption: "page thirty-nine", src: page36.url },
   { id: "page-37", title: "My Light", caption: "page forty — continued", src: page37.url },
+  { id: "page-38", title: "Here’s The Joke", caption: "page forty-one", src: page38.url },
+  { id: "page-39", title: "Here’s The Joke", caption: "page forty-two — continued", src: page39.url },
+  { id: "page-40", title: "Thoughtism", caption: "page forty-three", src: page40.url },
+  { id: "page-41", title: "Thoughtism", caption: "page forty-four — continued", src: page41.url },
+  { id: "page-42", title: "The Legacy", caption: "page forty-five", src: page42.url },
+  { id: "page-43", title: "The Legacy", caption: "page forty-six — continued", src: page43.url },
 ];
+
 
 
 
