@@ -69,6 +69,7 @@ export function Gallery() {
             </figure>
           );
         })}
+        <SecretVoiceTile variant="tile" label="Take The Voice Route" />
       </div>
 
       <VideoModal
