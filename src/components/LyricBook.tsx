@@ -45,7 +45,7 @@ export function LyricBook() {
       <div
         ref={scrollerRef}
         className="relative flex gap-5 sm:gap-8 overflow-x-auto overflow-y-hidden snap-x snap-mandatory pb-6 px-[max(1rem,calc((100vw-min(640px,90vw))/2))] sm:px-[max(2rem,calc((100vw-min(720px,80vw))/2))] scroll-smooth lyricbook-scroller"
-        aria-label="My Fake Life lyric book — scroll or swipe sideways"
+        aria-label="My Fake Lyrics — scroll or swipe sideways"
       >
         {LYRIC_BOOK_PAGES.map((p, i) => (
           <figure
@@ -59,9 +59,10 @@ export function LyricBook() {
             >
               <img
                 src={p.src}
-                alt={`${p.title} — lyric book ${p.caption ?? `page ${i + 1}`}`}
+                alt={`${p.title} — My Fake Lyrics ${p.caption ?? `page ${i + 1}`}`}
                 loading={i < 2 ? "eager" : "lazy"}
                 className="absolute inset-0 w-full h-full object-cover"
+
                 draggable={false}
               />
               <div className="absolute inset-0 vignette pointer-events-none" />

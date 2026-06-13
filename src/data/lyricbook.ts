@@ -1,3 +1,4 @@
+import coverFront from "@/assets/lyricbook/cover-front.png.asset.json";
 import page01 from "@/assets/lyricbook/page-01.png.asset.json";
 import page02 from "@/assets/lyricbook/page-02.png.asset.json";
 import page03 from "@/assets/lyricbook/page-03.png.asset.json";
@@ -18,6 +19,11 @@ import page17 from "@/assets/lyricbook/page-17.png.asset.json";
 import page18 from "@/assets/lyricbook/page-18.png.asset.json";
 import page19 from "@/assets/lyricbook/page-19.png.asset.json";
 import page20 from "@/assets/lyricbook/page-20.png.asset.json";
+import page21 from "@/assets/lyricbook/page-21.png.asset.json";
+import page22 from "@/assets/lyricbook/page-22.png.asset.json";
+import page23 from "@/assets/lyricbook/page-23.png.asset.json";
+import page24 from "@/assets/lyricbook/page-24.png.asset.json";
+import page25 from "@/assets/lyricbook/page-25.png.asset.json";
 
 export interface LyricBookPage {
   id: string;
@@ -26,8 +32,8 @@ export interface LyricBookPage {
   src: string;
 }
 
-// Add more pages here as they're uploaded — section will scale automatically.
 export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
+  { id: "cover-front", title: "My Fake Lyrics", caption: "front cover", src: coverFront.url },
   { id: "page-01", title: "My Fake Life", caption: "page one", src: page01.url },
   { id: "page-02", title: "My Fake Life", caption: "page two — continued", src: page02.url },
   { id: "page-03", title: "Where I Fit", caption: "page three", src: page03.url },
@@ -48,4 +54,11 @@ export const LYRIC_BOOK_PAGES: LyricBookPage[] = [
   { id: "page-18", title: "Every Version Of Me", caption: "page eighteen — continued", src: page18.url },
   { id: "page-19", title: "Everybody Has Nobody", caption: "page nineteen", src: page19.url },
   { id: "page-20", title: "Everybody Has Nobody", caption: "page twenty — continued", src: page20.url },
+  { id: "page-21", title: "The Hard Way", caption: "page twenty-one", src: page21.url },
+  { id: "page-22", title: "The Hard Way", caption: "page twenty-two — continued", src: page22.url },
+  { id: "page-23", title: "Hold Them Loose", caption: "page twenty-three", src: page23.url },
+  { id: "page-24", title: "Hold Them Loose", caption: "page twenty-four — continued", src: page24.url },
+  { id: "page-25", title: "The Easy Way", caption: "page twenty-five", src: page25.url },
+
 ];
+

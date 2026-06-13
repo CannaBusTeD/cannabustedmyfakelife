@@ -48,7 +48,7 @@ function AlbumSite() {
           <nav className="hidden sm:flex gap-7 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
             <a href="#tracks" className="hover:text-ember transition">Listen</a>
             <a href="#gallery" className="hover:text-ember transition">Videos</a>
-            <a href="#lyricbook" className="hover:text-ember transition">Lyric Book</a>
+            <a href="#lyricbook" className="hover:text-ember transition">My Fake Lyrics</a>
             <a href="#about" className="hover:text-ember transition">About</a>
             <a href="#press" className="hover:text-ember transition">Press</a>
           </nav>
@@ -201,13 +201,13 @@ function AlbumSite() {
         </figure>
       </section>
 
-      {/* Lyric Book — horizontal */}
+      {/* My Fake Lyrics — horizontal */}
       <section id="lyricbook" className="relative z-10 mt-24 sm:mt-32 scroll-mt-20">
         <div className="max-w-6xl mx-auto px-5 text-center mb-10">
           <div className="font-mono text-[11px] tracking-[0.4em] uppercase text-muted-foreground">
             Inside The Album
           </div>
-          <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">The My Fake Life Lyric Book</h2>
+          <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">My Fake Lyrics</h2>
           <p className="font-script text-ember text-xl mt-1">turn the pages — the room turns with you</p>
         </div>
         <LyricBook />
@@ -272,7 +272,6 @@ function AlbumSite() {
         </div>
       </section>
 
-
       {/* Quotable Lyric Tag Lines */}
       <section id="press" className="relative z-10 max-w-5xl mx-auto px-5 mt-28 sm:mt-36 scroll-mt-20">
         <div className="text-center mb-10">
@@ -315,7 +314,7 @@ function AlbumSite() {
           <div className="flex flex-wrap justify-center gap-6 font-mono text-[11px] uppercase tracking-[0.3em] text-muted-foreground">
             <a href="#tracks" className="hover:text-ember">Listen</a>
             <a href="#gallery" className="hover:text-ember">Watch</a>
-            <a href="#lyricbook" className="hover:text-ember">Lyric Book</a>
+            <a href="#lyricbook" className="hover:text-ember">My Fake Lyrics</a>
             <a href="#about" className="hover:text-ember">About</a>
             <a href="#press" className="hover:text-ember">Press</a>
           </div>
