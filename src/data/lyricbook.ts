@@ -47,6 +47,7 @@ import page40 from "@/assets/lyricbook/page-40.png.asset.json";
 import page41 from "@/assets/lyricbook/page-41.png.asset.json";
 import page42 from "@/assets/lyricbook/page-42.png.asset.json";
 import page43 from "@/assets/lyricbook/page-43.png.asset.json";
+import page44 from "@/assets/lyricbook/page-44.png.asset.json";
 
 export interface LyricBookPage {
   id: string;
