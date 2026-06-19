@@ -300,7 +300,6 @@ function ListenPage() {
           )}
         </section>
 
-        </section>
 
         {/* Quiet link back to landing */}
         <div className="mt-16 sm:mt-20">
