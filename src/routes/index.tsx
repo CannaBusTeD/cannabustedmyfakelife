@@ -44,8 +44,9 @@ function LandingPage() {
           Night service · My Fake Life
         </p>
 
-        <h1 className="font-script text-ember mt-10 sm:mt-12 text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-balance max-w-4xl">
-          I'm Homebound,<br />So I Built Somewhere To Go.
+        <h1 className="font-script text-ember normal-case mt-10 sm:mt-12 text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-balance max-w-4xl">
+          <span className="block">I'm housebound.</span>
+          <span className="block text-balance">So I built somewhere to go.</span>
         </h1>
 
         <p className="font-display italic text-parchment/85 mt-8 text-lg sm:text-xl md:text-2xl leading-relaxed text-balance max-w-2xl">
