@@ -82,6 +82,20 @@ function PlatformLink({ href, label, Icon }: PlatformProps) {
 }
 
 function ListenPage() {
+  const [ticketOpen, setTicketOpen] = useState(false);
+  const firstFieldRef = useRef<HTMLInputElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const wasOpenRef = useRef(false);
+
+  useEffect(() => {
+    if (ticketOpen && !wasOpenRef.current) {
+      firstFieldRef.current?.focus();
+    } else if (!ticketOpen && wasOpenRef.current) {
+      buttonRef.current?.focus();
+    }
+    wasOpenRef.current = ticketOpen;
+  }, [ticketOpen]);
+
   return (
     <div className="relative min-h-dvh text-foreground overflow-hidden">
       {/* Decorative dark wash over the site background */}
