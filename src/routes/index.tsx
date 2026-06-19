@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import landingBg from "@/assets/site/landing-background.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
