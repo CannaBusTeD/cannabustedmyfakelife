@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import landingBg from "@/assets/site/landing-background.png.asset.json";
 import returnTicketAsset from "@/assets/site/return-ticket.png.asset.json";
 
 export const Route = createFileRoute("/listen")({
@@ -98,6 +99,18 @@ function ListenPage() {
 
   return (
     <div className="relative min-h-dvh text-foreground overflow-hidden">
+      {/* Landing page background image */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[-1]"
+        style={{
+          backgroundImage: `url("${landingBg.url}")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center top",
+          backgroundRepeat: "no-repeat",
+          backgroundAttachment: "fixed",
+        }}
+      />
       {/* Decorative dark wash over the site background */}
       <div
         aria-hidden="true"
