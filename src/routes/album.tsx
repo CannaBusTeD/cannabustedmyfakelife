@@ -295,21 +295,25 @@ function AlbumSite() {
           <h2 className="font-display text-4xl sm:text-5xl mt-2 text-parchment">Quotable Lyric Tag Lines</h2>
           <p className="font-script text-ember text-xl mt-1">lines that wouldn't leave the room</p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 gap-5">
           {[
-            { q: "The room I'm building now has never charged me for the entry.", t: "— Where I Fit" },
-            { q: "Like the echo of applause that fades before it finds the rafters.", t: "— Where I Fit" },
-            { q: "I smiled, like they'd explained the weather to a matchstick.", t: "— Where I Fit" },
-            { q: "Every version of me, moving through the bruise.", t: "— Every Version Of Me" },
-            { q: "Doesn't fall too far behind.", t: "— Where I Fit" },
-            { q: "I write to make sense of the noise.", t: "— CannaBusTeD" },
-          ].map((c) => (
-            <figure key={c.q} className="wallpaper-panel rounded-sm p-6 relative">
+            { q: "So I smile like a forged signature, and the nasty little miracle is, I mean it.", t: "— My Fake Life I" },
+            { q: "I was never hard to love. I was hard to counterfeit.", t: "— Where I Fit" },
+            { q: "I lead with the worst of me, so the leaving feels chosen.", t: "— Everybody Has Nobody" },
+            { q: "Hear them out, hold them loose. A voice can knock without becoming law.", t: "— Hold Them Loose" },
+            { q: "The grave gets smaller once you've slept in it twice.", t: "— Died Too Many Times" },
+            { q: "The only animal stupid enough to know it dies — and still shows up on Tuesday.", t: "— Here's The Joke" },
+            { q: "The song disappears into what it disturbed — and the disturbance keeps singing.", t: "— The Legacy" },
+          ].map((c, i) => (
+            <figure
+              key={c.q}
+              className={`wallpaper-panel rounded-sm p-6 relative ${i === 6 ? "sm:col-span-2 justify-self-center max-w-md" : ""}`}
+            >
               <div className="absolute inset-0 vignette pointer-events-none" />
               <blockquote className="font-script text-xl text-parchment/95 leading-snug">
                 “{c.q}”
               </blockquote>
-              <figcaption className="mt-4 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+              <figcaption className="mt-4 font-mono text-[10px] uppercase tracking-[0.3em] text-parchment/75">
                 {c.t}
               </figcaption>
             </figure>
