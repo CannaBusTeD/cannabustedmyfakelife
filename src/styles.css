@@ -245,3 +245,35 @@
   .lyricbook-scroller::-webkit-scrollbar-thumb { background: oklch(0.4 0.06 35 / 0.5); border-radius: 999px; }
   .lyricbook-scroller::-webkit-scrollbar-track { background: transparent; }
 }
+
+/* Landing page — amber streetlight drift + accessible focus */
+@keyframes landing-amber-drift {
+  0%   { background-position: -20% 30%; }
+  50%  { background-position: 60% 55%; }
+  100% { background-position: 120% 40%; }
+}
+.landing-amber-drift {
+  background-image: radial-gradient(
+    ellipse 40% 60% at 0% 50%,
+    oklch(0.7 0.18 50 / 0.18),
+    transparent 70%
+  );
+  background-repeat: no-repeat;
+  background-size: 140% 140%;
+  animation: landing-amber-drift 18s ease-in-out infinite alternate;
+}
+.landing-quiet-link {
+  text-decoration: none;
+  border-bottom: 1px dashed oklch(0.55 0.18 35 / 0.55);
+  padding: 0.35rem 0.25rem;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+.landing-quiet-link:hover { color: oklch(0.95 0.06 75); border-color: oklch(0.6 0.2 35 / 0.9); }
+.landing-focus:focus-visible {
+  outline: 3px solid oklch(0.78 0.18 70);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .landing-amber-drift { animation: none; }
+}
