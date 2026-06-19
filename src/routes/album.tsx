@@ -11,7 +11,7 @@ import innerSleeve from "@/assets/site/inner-sleeve.png.asset.json";
 import albumBanner from "@/assets/site/album-banner.png.asset.json";
 import tracklistPoster from "@/assets/site/tracklist-poster.png.asset.json";
 
-export const Route = createFileRoute("/")({
+export const Route = createFileRoute("/album")({
   head: () => ({
     meta: [
       { title: "CannaBusTeD — My Fake Life" },
