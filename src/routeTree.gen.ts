@@ -10,32 +10,42 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as AlbumRouteImport } from './routes/album'
+import { Route as IndexRouteImport } from './routes/index'
 
 const AlbumRoute = AlbumRouteImport.update({
   id: '/album',
   path: '/album',
   getParentRoute: () => rootRouteImport,
 } as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
   '/album': typeof AlbumRoute
 }
 export interface FileRoutesByTo {
+  '/': typeof IndexRoute
   '/album': typeof AlbumRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
   '/album': typeof AlbumRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/album'
+  fullPaths: '/' | '/album'
   fileRoutesByTo: FileRoutesByTo
-  to: '/album'
-  id: '__root__' | '/album'
+  to: '/' | '/album'
+  id: '__root__' | '/' | '/album'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
   AlbumRoute: typeof AlbumRoute
 }
 
@@ -48,10 +58,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AlbumRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
   AlbumRoute: AlbumRoute,
 }
 export const routeTree = rootRouteImport
