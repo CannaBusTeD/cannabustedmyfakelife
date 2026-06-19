@@ -45,7 +45,7 @@ function LandingPage() {
         </p>
 
         <h1 className="font-script text-ember mt-10 sm:mt-12 text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-balance max-w-4xl">
-          I'm housebound. So I built somewhere to go.
+          I'm Homebound,<br />So I Built Somewhere To Go.
         </h1>
 
         <p className="font-display italic text-parchment/85 mt-8 text-lg sm:text-xl md:text-2xl leading-relaxed text-balance max-w-2xl">
