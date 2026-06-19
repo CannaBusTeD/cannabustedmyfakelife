@@ -123,7 +123,7 @@ function ListenPage() {
           </h2>
           <div className="flex flex-col items-stretch gap-4">
             <PlatformLink
-              href="https://music.apple.com/cannabusted"
+              href="https://music.apple.com/ug/artist/cannabusted/1592297432"
               label="Apple Music"
               Icon={IconApple}
             />
