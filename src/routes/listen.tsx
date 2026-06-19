@@ -1,4 +1,6 @@
+import { useRef, useState, useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import returnTicketAsset from "@/assets/site/return-ticket.png.asset.json";
 
 export const Route = createFileRoute("/listen")({
   head: () => ({
