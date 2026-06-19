@@ -61,13 +61,12 @@ function LandingPage() {
             ▶ Come aboard
           </Link>
 
-          {/* TODO: replace href with album streaming link when supplied */}
-          <a
-            href="#"
+          <Link
+            to="/listen"
             className="landing-quiet-link landing-focus font-script text-ember text-2xl sm:text-3xl"
           >
             Just here for the music →
-          </a>
+          </Link>
         </div>
       </main>
     </div>
