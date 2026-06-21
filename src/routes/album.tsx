@@ -10,7 +10,7 @@ import albumCover from "@/assets/site/album-cover.png.asset.json";
 import innerSleeve from "@/assets/site/inner-sleeve.png.asset.json";
 import albumBanner from "@/assets/site/album-banner.png.asset.json";
 import tracklistPoster from "@/assets/site/tracklist-poster.png.asset.json";
-import secretDoor from "@/assets/site/secret-door.png.asset.json";
+
 
 export const Route = createFileRoute("/album")({
   head: () => ({
