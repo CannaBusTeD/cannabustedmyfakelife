@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { LYRIC_BOOK_PAGES } from "@/data/lyricbook";
+import secretDoor from "@/assets/site/secret-door.png.asset.json";
 
 export function LyricBook() {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
