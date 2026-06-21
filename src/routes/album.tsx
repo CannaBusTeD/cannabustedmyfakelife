@@ -212,30 +212,6 @@ function AlbumSite() {
           <p className="font-script text-ember text-xl mt-1">turn the pages — the room turns with you</p>
         </div>
         <LyricBook />
-
-        {/* Secret door — unlisted route */}
-        <div className="mt-20 sm:mt-24 flex justify-center px-5">
-          <a
-            href="https://cloud-creation-crew.lovable.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Step through the door — an unlisted route"
-            className="group relative block w-full max-w-sm rounded-sm overflow-hidden ring-1 ring-border/60 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)] transition-transform duration-500 hover:-translate-y-1 hover:ring-ember/60"
-          >
-            <img
-              src={secretDoor.url}
-              alt="A worn door, slightly ajar, warm light spilling from inside"
-              className="w-full h-auto block transition-transform duration-700 group-hover:scale-[1.02]"
-            />
-            <div className="absolute inset-0 vignette pointer-events-none" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 text-center bg-gradient-to-t from-black/80 to-transparent">
-              <div className="font-script text-ember text-xl leading-none">step inside</div>
-              <div className="font-mono text-[10px] tracking-[0.35em] uppercase text-parchment/70 mt-1">
-                an unlisted route
-              </div>
-            </div>
-          </a>
-        </div>
       </section>
 
       {/* About */}
