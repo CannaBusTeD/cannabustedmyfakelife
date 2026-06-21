@@ -64,16 +64,53 @@ export function LyricBook() {
                 alt={`${p.title} — My Fake Lyrics ${p.caption ?? `page ${i + 1}`}`}
                 loading={i < 2 ? "eager" : "lazy"}
                 className="absolute inset-0 w-full h-full object-cover"
-
                 draggable={false}
               />
               <div className="absolute inset-0 vignette pointer-events-none" />
             </div>
             <figcaption className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-              {p.caption ?? `page ${i + 1}`} · {String(i + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+              {p.caption ?? `page ${i + 1}`} · {String(i + 1).padStart(2, "0")} / {String(pageTotal).padStart(2, "0")}
             </figcaption>
           </figure>
         ))}
+
+        {/* Secret door — last page */}
+        <figure
+          key="secret-door"
+          className="snap-center shrink-0 w-[min(640px,90vw)] sm:w-[min(560px,70vw)] md:w-[min(620px,55vw)]"
+          aria-current={activeIndex === pageTotal ? "page" : undefined}
+        >
+          <a
+            href="https://cloud-creation-crew.lovable.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Step through the door — an unlisted route"
+            className="group relative block w-full h-full"
+          >
+            <div
+              className="relative ring-1 ring-border/60 shadow-2xl bg-card overflow-hidden"
+              style={{ aspectRatio: "210 / 297" }}
+            >
+              <img
+                src={secretDoor.url}
+                alt="A worn door, slightly ajar, warm light spilling from inside"
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                draggable={false}
+              />
+              <div className="absolute inset-0 vignette pointer-events-none" />
+              <div className="absolute inset-0 flex flex-col items-center justify-end p-6 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                <div className="font-script text-ember text-2xl leading-none">step inside</div>
+                <div className="font-mono text-[10px] tracking-[0.35em] uppercase text-parchment/70 mt-1">
+                  an unlisted route
+                </div>
+              </div>
+            </div>
+          </a>
+          <figcaption className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+            The Door · {String(pageTotal + 1).padStart(2, "0")} / {String(pageTotal).padStart(2, "0")}
+          </figcaption>
+        </figure>
       </div>
 
       {/* Controls */}
