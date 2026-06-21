@@ -141,6 +141,16 @@ export function LyricBook() {
               }`}
             />
           ))}
+          <button
+            key="secret-door-dot"
+            role="tab"
+            aria-selected={activeIndex === pageTotal}
+            aria-label="Go to the door"
+            onClick={() => scrollToIndex(pageTotal)}
+            className={`h-1.5 rounded-full transition-all ${
+              activeIndex === pageTotal ? "w-6 bg-ember" : "w-1.5 bg-border hover:bg-parchment/60"
+            }`}
+          />
         </div>
         <button
           type="button"
