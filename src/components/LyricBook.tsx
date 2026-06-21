@@ -81,7 +81,7 @@ export function LyricBook() {
           aria-current={activeIndex === pageTotal ? "page" : undefined}
         >
           <a
-            href="https://cloud-creation-crew.lovable.app"
+            href="https://myfakegame.cannabusted.com/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Step through the door — an unlisted route"
