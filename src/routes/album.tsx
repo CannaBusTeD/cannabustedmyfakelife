@@ -4,6 +4,7 @@ import { Gallery } from "@/components/Gallery";
 import { LyricBook } from "@/components/LyricBook";
 import { SocialIconButtons } from "@/components/SocialIconButtons";
 import { SecretVoiceTile } from "@/components/SecretVoiceTile";
+import { ReturnTicketButton } from "@/components/ReturnTicket";
 import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
@@ -256,7 +257,7 @@ function AlbumSite() {
 
       {/* Secret doorway — The Voice */}
       <section aria-label="Hidden route" className="relative z-10 max-w-6xl mx-auto px-5 mt-24 sm:mt-32">
-        <div className="grid gap-6 items-center md:grid-cols-[minmax(0,1fr)_240px] md:gap-10">
+        <div className="grid gap-6 items-center md:grid-cols-[minmax(0,1fr)_280px] md:gap-10">
           <div className="flex justify-center md:justify-end">
             <SecretVoiceTile
               variant="doorway"
@@ -264,7 +265,7 @@ function AlbumSite() {
               caption="An unlisted route · The Voice"
             />
           </div>
-          <div className="relative flex flex-col items-center gap-4 md:items-start">
+          <div className="relative flex flex-col items-center gap-5 md:items-start">
             <a
               href="mailto:CannaBusTeD@icloud.com"
               aria-label="Email CannaBusTeD"
@@ -283,6 +284,9 @@ function AlbumSite() {
               <span className="font-script text-[1.7rem] leading-none text-ember">DonaTeD</span>
               <span className="text-xs text-parchment/75">paypal.me/CannaBusTeD</span>
             </a>
+            <div className="w-full max-w-[220px]">
+              <ReturnTicketButton />
+            </div>
           </div>
         </div>
       </section>
