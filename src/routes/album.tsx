@@ -4,6 +4,7 @@ import { Gallery } from "@/components/Gallery";
 import { LyricBook } from "@/components/LyricBook";
 import { SocialIconButtons } from "@/components/SocialIconButtons";
 import { SecretVoiceTile } from "@/components/SecretVoiceTile";
+import { ReturnTicketButton } from "@/components/ReturnTicket";
 import heroAsset from "@/assets/site/hero-portrait.png.asset.json";
 import signalAsset from "@/assets/site/signal-room.png.asset.json";
 import albumCover from "@/assets/site/album-cover.png.asset.json";
