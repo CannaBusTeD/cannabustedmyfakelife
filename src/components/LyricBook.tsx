@@ -36,7 +36,8 @@ export function LyricBook() {
     return () => el.removeEventListener("scroll", onScroll);
   }, []);
 
-  const total = LYRIC_BOOK_PAGES.length;
+  const pageTotal = LYRIC_BOOK_PAGES.length;
+  const total = pageTotal + 1; // +1 for secret door
   const prev = () => scrollToIndex(Math.max(0, activeIndex - 1));
   const next = () => scrollToIndex(Math.min(total - 1, activeIndex + 1));
 
