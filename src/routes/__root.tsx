@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import { FloatingNav } from "@/components/FloatingNav";
+import socialImage from "@/assets/site/social-my-fake-life.png.asset.json";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -85,8 +86,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "CannaBusTeD — My Fake Life" },
       { property: "og:description", content: "My Fake Life — a 23-track album from CannaBusTeD. Songs. Stories. Signals." },
       { name: "twitter:description", content: "My Fake Life — a 23-track album from CannaBusTeD. Songs. Stories. Signals." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/EFuEGeFmUfMuF8yRqaEXXNwo0Qf2/social-images/social-1781210199031-1000171571.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/EFuEGeFmUfMuF8yRqaEXXNwo0Qf2/social-images/social-1781210199031-1000171571.webp" },
+      { property: "og:image", content: `https://cannabusted.com${socialImage.url}` },
+      { name: "twitter:image", content: `https://cannabusted.com${socialImage.url}` },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:type", content: "website" },
     ],
