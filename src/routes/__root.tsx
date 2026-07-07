@@ -9,6 +9,7 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 import { FloatingNav } from "@/components/FloatingNav";
+import { CurtainIntro } from "@/components/CurtainIntro";
 import socialImage from "@/assets/site/social-my-fake-life.png.asset.json";
 
 import appCss from "../styles.css?url";
