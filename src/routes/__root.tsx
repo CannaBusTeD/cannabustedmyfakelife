@@ -80,6 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "google-site-verification", content: "34eWRq-mI5sbsQ2x-vOllkOk6wmM7E6z8o6kCLumC0E" },
       { title: "CannaBusTeD — My Fake Life" },
       { name: "description", content: "My Fake Life — a 23-track album from CannaBusTeD. Songs. Stories. Signals." },
       { name: "author", content: "CannaBusTeD" },
