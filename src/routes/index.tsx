@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import landingBg from "@/assets/site/landing-background.png.asset.json";
+import busAsset from "@/assets/site/ted-on-tour.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -58,13 +59,13 @@ function LandingPage() {
         </p>
 
         <h1 className="font-script text-ember normal-case mt-10 sm:mt-12 text-5xl sm:text-7xl md:text-8xl leading-[1.05] text-balance max-w-4xl">
-          <span className="block">I'm housebound.</span>
-          <span className="block text-balance">So I built somewhere to go.</span>
+          <span className="block">This is My Fake Life.</span>
+          <span className="block text-balance">Come and find the real one.</span>
         </h1>
 
         <p className="font-display italic text-parchment/85 mt-8 text-lg sm:text-xl md:text-2xl leading-relaxed text-balance max-w-2xl">
-          A double album and a whole world, built by a blind man who isn't going
-          anywhere. You are. Mind the step.
+          A double album and a whole world you can step inside. The music, the
+          masks, and whatever's underneath. Mind the step.
         </p>
 
         <div className="mt-12 sm:mt-14 flex flex-col items-center gap-7">
@@ -74,6 +75,21 @@ function LandingPage() {
           >
             ▶ Come aboard
           </Link>
+
+          <a
+            href="https://myfakelove.cannabusted.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ted on Tour — open myfakelove.cannabusted.com"
+            className="landing-focus block w-full max-w-md sm:max-w-lg transition-transform hover:scale-[1.02] focus-visible:scale-[1.02]"
+          >
+            <img
+              src={busAsset.url}
+              alt="Ted on Tour — vintage tour bus destined for Hartlepool"
+              className="block w-full h-auto select-none drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)]"
+              draggable={false}
+            />
+          </a>
 
           <Link
             to="/listen"
