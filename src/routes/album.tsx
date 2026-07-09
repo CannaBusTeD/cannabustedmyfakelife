@@ -11,6 +11,8 @@ import albumCover from "@/assets/site/album-cover.png.asset.json";
 import innerSleeve from "@/assets/site/inner-sleeve.png.asset.json";
 import albumBanner from "@/assets/site/album-banner.png.asset.json";
 import tracklistPoster from "@/assets/site/tracklist-poster.png.asset.json";
+import donatedAsset from "@/assets/site/donated.png.asset.json";
+import busAsset from "@/assets/site/ted-on-tour.png.asset.json";
 
 
 export const Route = createFileRoute("/album")({
@@ -279,14 +281,32 @@ function AlbumSite() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Donate to CannaBusTeD via PayPal"
-              className="btn-floating-note btn-floating-note--small md:ml-10 md:rotate-1"
+              className="landing-focus block w-40 sm:w-48 transition-transform hover:scale-[1.03] focus-visible:scale-[1.03] md:ml-6 md:rotate-[-2deg]"
             >
-              <span className="font-script text-[1.7rem] leading-none text-ember">DonaTeD</span>
-              <span className="text-xs text-parchment/75">paypal.me/CannaBusTeD</span>
+              <img
+                src={donatedAsset.url}
+                alt="DoNaTeD — support CannaBusTeD via PayPal"
+                className="block w-full h-auto select-none drop-shadow-[0_10px_25px_rgba(0,0,0,0.6)]"
+                draggable={false}
+              />
             </a>
             <div className="w-full max-w-[220px]">
               <ReturnTicketButton />
             </div>
+            <a
+              href="https://myfakelove.cannabusted.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ted on Tour — open myfakelove.cannabusted.com"
+              className="landing-focus block w-full max-w-sm transition-transform hover:scale-[1.02] focus-visible:scale-[1.02]"
+            >
+              <img
+                src={busAsset.url}
+                alt="Ted on Tour — vintage tour bus destined for Hartlepool"
+                className="block w-full h-auto select-none drop-shadow-[0_10px_30px_rgba(0,0,0,0.55)]"
+                draggable={false}
+              />
+            </a>
           </div>
         </div>
       </section>
