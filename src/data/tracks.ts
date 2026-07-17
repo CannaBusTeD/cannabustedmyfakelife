@@ -22,7 +22,7 @@ import audio_EverybodyHasNobody from "@/assets/audio/everybody-has-nobody.mp3.as
 import cover_MyFakeLifeIi from "@/assets/covers/my-fake-life-ii.png.asset.json";
 import audio_MyFakeLifeIi from "@/assets/audio/my-fake-life-ii.mp3.asset.json";
 import cover_TheHardWay from "@/assets/covers/the-hard-way.png.asset.json";
-import audio_TheHardWay from "@/assets/audio/the-hard-way.mp3.asset.json";
+import audio_TheHardWay from "@/assets/audio/the-hard-way.wav.asset.json";
 import cover_HoldThemLoose from "@/assets/covers/hold-them-loose.png.asset.json";
 import audio_HoldThemLoose from "@/assets/audio/hold-them-loose.mp3.asset.json";
 import cover_TheEasyWay from "@/assets/covers/the-easy-way.png.asset.json";
