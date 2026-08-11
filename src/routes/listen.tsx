@@ -204,6 +204,16 @@ function ListenPage() {
           </div>
         </section>
 
+        {/* Guide */}
+        <div className="mt-16 sm:mt-20">
+          <Link
+            to="/guide/how-to-make-a-concept-album"
+            className="landing-quiet-link landing-focus font-script text-ember text-xl sm:text-2xl"
+          >
+            How I made a concept album →
+          </Link>
+        </div>
+
         {/* Quiet link back to landing */}
         <div className="mt-16 sm:mt-20">
           <Link
