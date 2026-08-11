@@ -349,20 +349,27 @@ function AlbumSite() {
 
       {/* The books — cross-link doorway */}
       <section id="books" className="relative z-10 max-w-3xl mx-auto px-5 mt-28 sm:mt-36 scroll-mt-20">
-        <div className="wallpaper-panel rounded-sm p-8 sm:p-10 relative flex flex-col items-center text-center gap-6">
-          <div className="absolute inset-0 vignette pointer-events-none" />
-          <img
-            src={bookAsset.url}
-            alt=""
-            aria-hidden="true"
-            loading="lazy"
-            className="relative w-40 sm:w-[280px] h-auto drop-shadow-[0_18px_40px_rgba(0,0,0,0.65)] transition-transform duration-500 motion-safe:hover:scale-[1.03] motion-reduce:transition-none"
-          />
+        <div className="relative flex flex-col items-center text-center gap-6">
+          <a
+            href="https://myfakebook.cannabusted.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read the books — opens the My Fake Book site in a new tab"
+            className="landing-focus block"
+          >
+            <img
+              src={bookAsset.url}
+              alt=""
+              aria-hidden="true"
+              loading="lazy"
+              className="relative w-40 sm:w-[280px] h-auto drop-shadow-[0_18px_40px_rgba(0,0,0,0.65)] transition-transform duration-500 motion-safe:hover:scale-[1.03] motion-reduce:transition-none"
+            />
+          </a>
           <div className="relative">
-            <h2 className="font-display text-3xl sm:text-4xl text-parchment text-balance">
+            <h2 className="font-display text-3xl sm:text-4xl text-parchment text-balance drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
               There's a book on the seat.
             </h2>
-            <p className="mt-3 text-parchment/80 leading-relaxed text-lg text-balance">
+            <p className="mt-3 text-parchment/85 leading-relaxed text-lg text-balance drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
               Two novellas set in the same town as the songs. Free to read online.
             </p>
           </div>
@@ -376,6 +383,7 @@ function AlbumSite() {
             Read the Books
           </a>
         </div>
+
       </section>
 
       {/* Footer */}
