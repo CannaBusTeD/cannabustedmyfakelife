@@ -13,6 +13,7 @@ import albumBanner from "@/assets/site/album-banner.png.asset.json";
 import tracklistPoster from "@/assets/site/tracklist-poster.png.asset.json";
 import donatedAsset from "@/assets/site/donated.png.asset.json";
 import busAsset from "@/assets/site/ted-on-tour.png.asset.json";
+import bookAsset from "@/assets/site/still-life-book.png.asset.json";
 
 
 export const Route = createFileRoute("/album")({
