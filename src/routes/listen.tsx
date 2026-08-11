@@ -137,17 +137,17 @@ function ListenPage() {
           </h2>
           <div className="flex flex-col items-stretch gap-4">
             <PlatformLink
-              href="https://music.apple.com/ug/artist/cannabusted/1592297432"
+              href={SOCIAL_LINKS.apple}
               label="Apple Music"
               Icon={IconApple}
             />
             <PlatformLink
-              href="https://open.spotify.com/artist/5ffLruUeSIhhOxr5PdVPI5?si=OF4YBFuJSbS0ZbGnjwvSJw"
+              href={SOCIAL_LINKS.spotify}
               label="Spotify"
               Icon={IconSpotify}
             />
             <PlatformLink
-              href="https://music.amazon.co.uk/artists/B09KJF6SFQ"
+              href={SOCIAL_LINKS.amazon}
               label="Amazon Music"
               Icon={IconAmazon}
             />
@@ -164,17 +164,17 @@ function ListenPage() {
           </h2>
           <div className="flex flex-col items-stretch gap-4">
             <PlatformLink
-              href="https://youtube.com/@cannabusted?si=dkAMHMxNYIwT6he0"
+              href={SOCIAL_LINKS.youtube}
               label="YouTube"
               Icon={IconYouTube}
             />
             <PlatformLink
-              href="https://www.tiktok.com/@cannabusted?_r=1&_t=ZN-97LXxKhMoy6"
+              href={SOCIAL_LINKS.tiktok}
               label="TikTok"
               Icon={IconTikTok}
             />
             <PlatformLink
-              href="https://www.facebook.com/cannabusted"
+              href={SOCIAL_LINKS.facebook}
               label="Facebook"
               Icon={IconFacebook}
             />
