@@ -1,6 +1,11 @@
 import { Link, useLocation } from "@tanstack/react-router";
 
-const NAV_ORDER = ["/", "/album", "/listen"] as const;
+const NAV_ORDER = [
+  "/",
+  "/album",
+  "/listen",
+  "/guide/how-to-make-a-concept-album",
+] as const;
 
 type NavPath = (typeof NAV_ORDER)[number];
 
