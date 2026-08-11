@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import landingBg from "@/assets/site/landing-background.png.asset.json";
 import { ReturnTicketButton } from "@/components/ReturnTicket";
+import { SOCIAL_LINKS } from "@/data/social";
 
 export const Route = createFileRoute("/listen")({
   head: () => ({
