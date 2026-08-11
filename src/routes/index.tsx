@@ -2,7 +2,43 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import landingBg from "@/assets/site/landing-background.png.asset.json";
 import busAsset from "@/assets/site/ted-on-tour.png.asset.json";
 import bookAsset from "@/assets/site/still-life-book.png.asset.json";
+import socialImage from "@/assets/site/social-my-fake-life.png.asset.json";
+import { tracks } from "@/data/tracks";
+import { SOCIAL_LINKS } from "@/data/social";
 
+const SITE_URL = "https://cannabusted.com";
+
+const albumJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MusicGroup",
+      "@id": `${SITE_URL}/#artist`,
+      name: "CannaBusTeD",
+      url: SITE_URL,
+      description:
+        "CannaBusTeD is a housebound blind songwriter and storyteller behind the double album My Fake Life.",
+      sameAs: Object.values(SOCIAL_LINKS),
+    },
+    {
+      "@type": "MusicAlbum",
+      "@id": `${SITE_URL}/#album`,
+      name: "My Fake Life",
+      url: `${SITE_URL}/album`,
+      image: `${SITE_URL}${socialImage.url}`,
+      numTracks: tracks.length,
+      byArtist: { "@id": `${SITE_URL}/#artist` },
+      albumProductionType: "https://schema.org/StudioAlbum",
+      track: tracks.map((t, i) => ({
+        "@type": "MusicRecording",
+        position: i + 1,
+        name: t.title,
+        byArtist: { "@id": `${SITE_URL}/#artist` },
+        inAlbum: { "@id": `${SITE_URL}/#album` },
+      })),
+    },
+  ],
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,10 +55,19 @@ export const Route = createFileRoute("/")({
         content:
           "A double album and a whole world, built by a blind man who isn't going anywhere. You are. Mind the step.",
       },
+      { property: "og:url", content: `${SITE_URL}/` },
+    ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(albumJsonLd),
+      },
     ],
   }),
   component: LandingPage,
 });
+
 
 function LandingPage() {
   return (

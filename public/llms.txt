@@ -1,0 +1,16 @@
+# CannaBusTeD — My Fake Life
+
+> My Fake Life is a 23-track double album and immersive online world by CannaBusTeD, a housebound blind songwriter from the North East of England. Songs, lyric book, artwork and hidden doors.
+
+The site is a single album world: a landing page ("the door"), the full album experience with player, lyric book and artwork, and a listening hub linking to streaming platforms.
+
+## Pages
+
+- [Landing](/): The way in — the night-service door to My Fake Life.
+- [Album](/album): The full My Fake Life experience — 23-track player, lyric book, artwork and stories.
+- [Listen](/listen): Streaming and social links — Spotify, Apple Music, Amazon Music, YouTube, TikTok, Facebook — plus the free return-ticket mailing list.
+
+## Optional
+
+- [Ted on Tour](https://myfakelove.cannabusted.com): A companion site from the same world.
+- [My Fake Book](https://myfakebook.cannabusted.com): Two novellas set in the same town as the songs, free to read online.
