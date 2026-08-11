@@ -99,8 +99,25 @@ function LandingPage() {
           >
             Just here for the music →
           </Link>
+
+          <a
+            href="https://myfakebook.cannabusted.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Read the books — opens the My Fake Book site in a new tab"
+            className="landing-focus block w-24 sm:w-28 transition-transform duration-500 motion-safe:hover:scale-[1.05] motion-reduce:transition-none"
+          >
+            <img
+              src={bookAsset.url}
+              alt=""
+              aria-hidden="true"
+              className="block w-full h-auto select-none drop-shadow-[0_10px_28px_rgba(0,0,0,0.6)]"
+              draggable={false}
+            />
+          </a>
         </div>
       </main>
+
     </div>
   );
 }
