@@ -64,7 +64,7 @@ function GuidePage() {
       <div
         aria-hidden="true"
         className="fixed inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: `url(${landingBg.src})` }}
+        style={{ backgroundImage: `url(${landingBg.url})` }}
       />
       <div aria-hidden="true" className="fixed inset-0 -z-10 bg-background/75" />
 

@@ -13,6 +13,7 @@ import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ListenRouteImport } from './routes/listen'
 import { Route as AlbumRouteImport } from './routes/album'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GuideHowToMakeAConceptAlbumRouteImport } from './routes/guide.how-to-make-a-concept-album'
 
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
@@ -34,18 +35,26 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GuideHowToMakeAConceptAlbumRoute =
+  GuideHowToMakeAConceptAlbumRouteImport.update({
+    id: '/guide/how-to-make-a-concept-album',
+    path: '/guide/how-to-make-a-concept-album',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/album': typeof AlbumRoute
   '/listen': typeof ListenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/guide/how-to-make-a-concept-album': typeof GuideHowToMakeAConceptAlbumRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/album': typeof AlbumRoute
   '/listen': typeof ListenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/guide/how-to-make-a-concept-album': typeof GuideHowToMakeAConceptAlbumRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +62,30 @@ export interface FileRoutesById {
   '/album': typeof AlbumRoute
   '/listen': typeof ListenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/guide/how-to-make-a-concept-album': typeof GuideHowToMakeAConceptAlbumRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/album' | '/listen' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/album'
+    | '/listen'
+    | '/sitemap.xml'
+    | '/guide/how-to-make-a-concept-album'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/album' | '/listen' | '/sitemap.xml'
-  id: '__root__' | '/' | '/album' | '/listen' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/album'
+    | '/listen'
+    | '/sitemap.xml'
+    | '/guide/how-to-make-a-concept-album'
+  id:
+    | '__root__'
+    | '/'
+    | '/album'
+    | '/listen'
+    | '/sitemap.xml'
+    | '/guide/how-to-make-a-concept-album'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +93,7 @@ export interface RootRouteChildren {
   AlbumRoute: typeof AlbumRoute
   ListenRoute: typeof ListenRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  GuideHowToMakeAConceptAlbumRoute: typeof GuideHowToMakeAConceptAlbumRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +126,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/guide/how-to-make-a-concept-album': {
+      id: '/guide/how-to-make-a-concept-album'
+      path: '/guide/how-to-make-a-concept-album'
+      fullPath: '/guide/how-to-make-a-concept-album'
+      preLoaderRoute: typeof GuideHowToMakeAConceptAlbumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +141,7 @@ const rootRouteChildren: RootRouteChildren = {
   AlbumRoute: AlbumRoute,
   ListenRoute: ListenRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  GuideHowToMakeAConceptAlbumRoute: GuideHowToMakeAConceptAlbumRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
