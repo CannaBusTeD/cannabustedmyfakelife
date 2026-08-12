@@ -18,7 +18,9 @@ export const Route = createFileRoute("/listen")({
         content:
           "Pick where you listen to My Fake Life. Stream, watch, or play it right here on the bus.",
       },
+      { property: "og:url", content: "https://cannabusted.com/listen" },
     ],
+    links: [{ rel: "canonical", href: "https://cannabusted.com/listen" }],
   }),
   component: ListenPage,
 });
