@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 import { FloatingNav } from "@/components/FloatingNav";
 import { CurtainIntro } from "@/components/CurtainIntro";
-import socialImage from "@/assets/site/social-my-fake-life.png.asset.json";
+
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -81,15 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "google-site-verification", content: "34eWRq-mI5sbsQ2x-vOllkOk6wmM7E6z8o6kCLumC0E" },
-      { title: "CannaBusTeD — My Fake Life" },
-      { name: "description", content: "My Fake Life — a 23-track album from CannaBusTeD. Songs. Stories. Signals." },
       { name: "author", content: "CannaBusTeD" },
-      { property: "og:title", content: "CannaBusTeD — My Fake Life" },
-      { name: "twitter:title", content: "CannaBusTeD — My Fake Life" },
-      { property: "og:description", content: "My Fake Life — a 23-track album from CannaBusTeD. Songs. Stories. Signals." },
-      { name: "twitter:description", content: "My Fake Life — a 23-track album from CannaBusTeD. Songs. Stories. Signals." },
-      { property: "og:image", content: `https://cannabusted.com${socialImage.url}` },
-      { name: "twitter:image", content: `https://cannabusted.com${socialImage.url}` },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:type", content: "website" },
     ],
