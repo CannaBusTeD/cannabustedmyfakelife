@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { AlbumPlayer } from "@/components/AlbumPlayer";
 import { Gallery } from "@/components/Gallery";
 import { LyricBook } from "@/components/LyricBook";
@@ -14,6 +14,7 @@ import tracklistPoster from "@/assets/site/tracklist-poster.png.asset.json";
 import donatedAsset from "@/assets/site/donated.png.asset.json";
 import busAsset from "@/assets/site/ted-on-tour.png.asset.json";
 import bookAsset from "@/assets/site/still-life-book.png.asset.json";
+import toolboxAsset from "@/assets/site/teds-toolbox.png.asset.json";
 
 
 export const Route = createFileRoute("/album")({
@@ -389,6 +390,51 @@ function AlbumSite() {
 
       </section>
 
+      {/* TeD's Toolbox — final stop */}
+      <section
+        id="toolbox"
+        aria-labelledby="toolbox-heading"
+        className="relative z-10 max-w-3xl mx-auto px-5 mt-28 sm:mt-36 scroll-mt-20"
+      >
+        <div className="flex flex-col items-center text-center gap-5">
+          <p className="font-script text-ember text-2xl sm:text-3xl">
+            Want to build your own world?
+          </p>
+          <Link
+            to="/how-to-build-a-world"
+            aria-label="Open How to Build a World"
+            className="landing-focus block"
+          >
+            <img
+              src={toolboxAsset.url}
+              alt="Old battered toolbox labelled TeD's Toolbox"
+              loading="lazy"
+              className="w-48 sm:w-72 h-auto drop-shadow-[0_18px_40px_rgba(0,0,0,0.65)] transition-transform duration-500 motion-safe:hover:scale-[1.03] motion-reduce:transition-none"
+            />
+          </Link>
+          <div>
+            <h2
+              id="toolbox-heading"
+              className="font-display text-3xl sm:text-4xl text-parchment drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]"
+            >
+              TeD&apos;s Toolbox
+            </h2>
+            <p className="mt-2 text-parchment/85 text-lg drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+              How to build your own world
+            </p>
+          </div>
+          <Link
+            to="/how-to-build-a-world"
+            aria-label="Open How to Build a World"
+            className="btn-poster btn-poster--ember landing-focus min-h-11 px-8 py-4 text-base"
+          >
+            Open the Toolbox
+          </Link>
+        </div>
+      </section>
+
+
+
       {/* Footer */}
 
       <footer className="relative z-10 mt-32 border-t border-border/60">
@@ -404,7 +450,14 @@ function AlbumSite() {
             <a href="#lyricbook" className="hover:text-ember">My Fake Lyrics</a>
             <a href="#about" className="hover:text-ember">About</a>
             <a href="#press" className="hover:text-ember">Press</a>
+            <Link to="/how-to-build-a-world" className="hover:text-ember">How To</Link>
           </div>
+          <div className="font-mono text-[11px] tracking-[0.2em] text-muted-foreground">
+            <Link to="/how-to-build-a-world" className="hover:text-ember">
+              How to Build a World
+            </Link>
+          </div>
+
           <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground opacity-70">
             © CannaBusTeD · Songs · Stories · Signals
           </div>
