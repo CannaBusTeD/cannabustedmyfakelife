@@ -34,11 +34,15 @@ export const Route = createFileRoute("/album")({
       },
       { property: "og:type", content: "music.album" },
       { property: "og:url", content: "https://cannabusted.com/album" },
-      { property: "og:image", content: heroAsset.url },
+      { property: "og:image", content: `https://cannabusted.com${heroAsset.url}` },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "My Fake Life Album — CannaBusTeD" },
-      { name: "twitter:image", content: heroAsset.url },
-
+      {
+        name: "twitter:description",
+        content:
+          "Step inside a strange little world of music, masks, memory, humour and hurt. A 23-track concept album from CannaBusTeD.",
+      },
+      { name: "twitter:image", content: `https://cannabusted.com${heroAsset.url}` },
     ],
     links: [{ rel: "canonical", href: "https://cannabusted.com/album" }],
   }),
