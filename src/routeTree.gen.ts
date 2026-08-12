@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as ListenRouteImport } from './routes/listen'
+import { Route as HowToBuildAWorldRouteImport } from './routes/how-to-build-a-world'
 import { Route as AlbumRouteImport } from './routes/album'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as GuideHowToMakeAConceptAlbumRouteImport } from './routes/guide.how-to-make-a-concept-album'
@@ -23,6 +24,11 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
 const ListenRoute = ListenRouteImport.update({
   id: '/listen',
   path: '/listen',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HowToBuildAWorldRoute = HowToBuildAWorldRouteImport.update({
+  id: '/how-to-build-a-world',
+  path: '/how-to-build-a-world',
   getParentRoute: () => rootRouteImport,
 } as any)
 const AlbumRoute = AlbumRouteImport.update({
@@ -45,6 +51,7 @@ const GuideHowToMakeAConceptAlbumRoute =
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/album': typeof AlbumRoute
+  '/how-to-build-a-world': typeof HowToBuildAWorldRoute
   '/listen': typeof ListenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/guide/how-to-make-a-concept-album': typeof GuideHowToMakeAConceptAlbumRoute
@@ -52,6 +59,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/album': typeof AlbumRoute
+  '/how-to-build-a-world': typeof HowToBuildAWorldRoute
   '/listen': typeof ListenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/guide/how-to-make-a-concept-album': typeof GuideHowToMakeAConceptAlbumRoute
@@ -60,6 +68,7 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/album': typeof AlbumRoute
+  '/how-to-build-a-world': typeof HowToBuildAWorldRoute
   '/listen': typeof ListenRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/guide/how-to-make-a-concept-album': typeof GuideHowToMakeAConceptAlbumRoute
@@ -69,6 +78,7 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/album'
+    | '/how-to-build-a-world'
     | '/listen'
     | '/sitemap.xml'
     | '/guide/how-to-make-a-concept-album'
@@ -76,6 +86,7 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/album'
+    | '/how-to-build-a-world'
     | '/listen'
     | '/sitemap.xml'
     | '/guide/how-to-make-a-concept-album'
@@ -83,6 +94,7 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/album'
+    | '/how-to-build-a-world'
     | '/listen'
     | '/sitemap.xml'
     | '/guide/how-to-make-a-concept-album'
@@ -91,6 +103,7 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AlbumRoute: typeof AlbumRoute
+  HowToBuildAWorldRoute: typeof HowToBuildAWorldRoute
   ListenRoute: typeof ListenRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   GuideHowToMakeAConceptAlbumRoute: typeof GuideHowToMakeAConceptAlbumRoute
@@ -110,6 +123,13 @@ declare module '@tanstack/react-router' {
       path: '/listen'
       fullPath: '/listen'
       preLoaderRoute: typeof ListenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/how-to-build-a-world': {
+      id: '/how-to-build-a-world'
+      path: '/how-to-build-a-world'
+      fullPath: '/how-to-build-a-world'
+      preLoaderRoute: typeof HowToBuildAWorldRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/album': {
@@ -139,6 +159,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AlbumRoute: AlbumRoute,
+  HowToBuildAWorldRoute: HowToBuildAWorldRoute,
   ListenRoute: ListenRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   GuideHowToMakeAConceptAlbumRoute: GuideHowToMakeAConceptAlbumRoute,
@@ -146,3 +167,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
