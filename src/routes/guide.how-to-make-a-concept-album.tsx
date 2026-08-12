@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import landingBg from "@/assets/site/landing-background.png.asset.json";
+import socialImage from "@/assets/site/social-my-fake-life.png.asset.json";
 
 const TITLE = "How to Make a Concept Album — CannaBusTeD";
 const DESCRIPTION =
@@ -16,7 +17,11 @@ export const Route = createFileRoute("/guide/how-to-make-a-concept-album")({
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "article" },
       { property: "og:url", content: URL },
+      { property: "og:image", content: `https://cannabusted.com${socialImage.url}` },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESCRIPTION },
+      { name: "twitter:image", content: `https://cannabusted.com${socialImage.url}` },
     ],
     links: [{ rel: "canonical", href: URL }],
     scripts: [

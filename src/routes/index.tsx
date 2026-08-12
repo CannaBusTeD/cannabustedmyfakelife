@@ -56,6 +56,14 @@ export const Route = createFileRoute("/")({
           "A double album and a whole world, built by a blind man who isn't going anywhere. You are. Mind the step.",
       },
       { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:image", content: `${SITE_URL}${socialImage.url}` },
+      { name: "twitter:title", content: "Night service · My Fake Life" },
+      {
+        name: "twitter:description",
+        content:
+          "A double album and a whole world, built by a blind man who isn't going anywhere. You are. Mind the step.",
+      },
+      { name: "twitter:image", content: `${SITE_URL}${socialImage.url}` },
     ],
     links: [{ rel: "canonical", href: `${SITE_URL}/` }],
     scripts: [

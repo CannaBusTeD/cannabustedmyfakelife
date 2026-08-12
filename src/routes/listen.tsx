@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import landingBg from "@/assets/site/landing-background.png.asset.json";
+import socialImage from "@/assets/site/social-my-fake-life.png.asset.json";
 import { ReturnTicketButton } from "@/components/ReturnTicket";
 import { SOCIAL_LINKS } from "@/data/social";
 
@@ -19,6 +20,14 @@ export const Route = createFileRoute("/listen")({
           "Pick where you listen to My Fake Life. Stream, watch, or play it right here on the bus.",
       },
       { property: "og:url", content: "https://cannabusted.com/listen" },
+      { property: "og:image", content: `https://cannabusted.com${socialImage.url}` },
+      { name: "twitter:title", content: "Listen — CannaBusTeD · My Fake Life" },
+      {
+        name: "twitter:description",
+        content:
+          "Pick where you listen to My Fake Life. Stream, watch, or play it right here on the bus.",
+      },
+      { name: "twitter:image", content: `https://cannabusted.com${socialImage.url}` },
     ],
     links: [{ rel: "canonical", href: "https://cannabusted.com/listen" }],
   }),
