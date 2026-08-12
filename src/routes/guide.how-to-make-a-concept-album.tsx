@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import landingBg from "@/assets/site/landing-background.png.asset.json";
 
-const TITLE = "How to Make a Concept Album — A Working Guide from CannaBusTeD";
+const TITLE = "How to Make a Concept Album — CannaBusTeD";
 const DESCRIPTION =
-  "How a 23-track concept album actually gets made: finding the thread, mapping the running order, writing recurring motifs, and finishing a big record from one room.";
+  "How a 23-track concept album gets made: finding the thread, mapping the running order, writing motifs, and finishing a big record from one room.";
+
 const URL = "https://cannabusted.com/guide/how-to-make-a-concept-album";
 
 export const Route = createFileRoute("/guide/how-to-make-a-concept-album")({
