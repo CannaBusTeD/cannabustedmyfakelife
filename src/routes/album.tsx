@@ -32,12 +32,14 @@ export const Route = createFileRoute("/album")({
           "Step inside a strange little world of music, masks, memory, humour and hurt. A 23-track concept album from CannaBusTeD.",
       },
       { property: "og:type", content: "music.album" },
+      { property: "og:url", content: "https://cannabusted.com/album" },
       { property: "og:image", content: heroAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "My Fake Life Album — CannaBusTeD" },
       { name: "twitter:image", content: heroAsset.url },
 
     ],
+    links: [{ rel: "canonical", href: "https://cannabusted.com/album" }],
   }),
   component: AlbumSite,
 });
