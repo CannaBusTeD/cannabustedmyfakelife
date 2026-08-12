@@ -10,6 +10,7 @@ The site is a single album world: a landing page ("the door"), the full album ex
 - [Album](/album): The full My Fake Life experience — 23-track player, lyric book, artwork and stories.
 - [How to make a concept album](/guide/how-to-make-a-concept-album): A working guide to writing, sequencing and finishing a concept album, from the making of My Fake Life.
 - [Listen](/listen): Streaming and social links — Spotify, Apple Music, Amazon Music, YouTube, TikTok, Facebook — plus the free return-ticket mailing list.
+- [How to Build a World](/how-to-build-a-world): TeD's Toolbox — an eight-step personal guide to turning one idea into songs, images, video, books and websites.
 
 ## Optional
 
