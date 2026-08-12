@@ -216,6 +216,19 @@ function ListenPage() {
           </Link>
         </div>
 
+        {/* Toolbox pointer */}
+        <div className="mt-8">
+          <Link
+            to="/how-to-build-a-world"
+            aria-label="Open How to Build a World"
+            className="landing-quiet-link landing-focus font-script text-ember text-xl sm:text-2xl"
+          >
+            The toolbox is open if you want to see how this was made →
+          </Link>
+        </div>
+
+
+
         {/* Quiet link back to landing */}
         <div className="mt-16 sm:mt-20">
           <Link
