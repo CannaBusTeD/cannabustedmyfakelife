@@ -19,13 +19,13 @@ import bookAsset from "@/assets/site/still-life-book.png.asset.json";
 export const Route = createFileRoute("/album")({
   head: () => ({
     meta: [
-      { title: "CannaBusTeD — My Fake Life" },
+      { title: "My Fake Life — The Album · CannaBusTeD" },
       {
         name: "description",
         content:
           "My Fake Life — a 23-track concept album from CannaBusTeD. Songs, videos, lyrics, artwork and the odd uncomfortable truth.",
       },
-      { property: "og:title", content: "CannaBusTeD — My Fake Life" },
+      { property: "og:title", content: "My Fake Life Album — CannaBusTeD" },
       {
         property: "og:description",
         content:
@@ -34,8 +34,9 @@ export const Route = createFileRoute("/album")({
       { property: "og:type", content: "music.album" },
       { property: "og:image", content: heroAsset.url },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "CannaBusTeD — My Fake Life" },
+      { name: "twitter:title", content: "My Fake Life Album — CannaBusTeD" },
       { name: "twitter:image", content: heroAsset.url },
+
     ],
   }),
   component: AlbumSite,
